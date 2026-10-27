@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official notices and announcements of Ramgarh College">
+
+    <title>Notice Board | Ramgarh College</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- Notice CSS (also contains navbar styles) - keep last -->
+    <link rel="stylesheet" href="assets/css/notice.css">
+</head>
+
+<body>
+
+<!-- =========================================================
+     TOP BAR + NAVBAR
+========================================================= -->
+
+<div class="topbar">
+    Ramgarh College Ramgarh, Hazaribagh &nbsp;|&nbsp; Constituent University Vinoba Bhave
+</div>
+
+<header class="navbar">
+    <div class="nav-inner">
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+
+        <ul class="nav-list" id="navList">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="academic.html">Academics</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="notice.html">Notice</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="rti.html">RTI</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" id="moreToggle" aria-haspopup="true" aria-expanded="false">
+                    More <span class="dropdown-arrow">&#9662;</span>
+                </a>
+
+                <ul class="dropdown-menu" id="moreMenu">
+                    <li><a href="more.html#ignou">IGNOU</a></li>
+                    <li><a href="more.html#canteen">Canteen</a></li>
+                    <li><a href="more.html#library">Library</a></li>
+                    <li><a href="more.html#reading-room">Reading Room</a></li>
+                    <li><a href="more.html#iqac">IQAC</a></li>
+                    <li><a href="more.html#ncc">NCC</a></li>
+                    <li><a href="more.html#nss">NSS</a></li>
+                    <li><a href="more.html#multidisciplinary">Multidisciplinary Activities</a></li>
+                    <li><a href="more.html#cs">CS</a></li>
+                    <li><a href="more.html#sports">Sports</a></li>
+                    <li><a href="more.html#hostel">Hostel</a></li>
+                    <li><a href="more.html#iic">IIC</a></li>
+                    
+                </ul>
+            </li>
+
+            <li><a href="../backend/scr/student-portal/login.php" class="btn-login">Student Login</a></li>
+        </ul>
+
+    </div>
+</header>
+
+
+<!-- =========================================================
+     NOTICE HERO
+========================================================= -->
+
+<section class="notice-hero">
+    <div class="container">
+
+        <span class="notice-hero-tag">NOTICE BOARD</span>
+
+        <h1>Latest Official Announcements</h1>
+
+        <p>
+            Important notices, academic updates and
+            official announcements of Ramgarh College.
+        </p>
+
+    </div>
+</section>
+
+
+<!-- =========================================================
+     IMPORTANT NOTICES (loaded from database by notice.js)
+     Stats cards are inserted above this section by notice.js
+========================================================= -->
+
+<section class="important-notices">
+    <div class="container">
+
+        <div class="section-heading">
+            <span>IMPORTANT</span>
+            <h2>Important Notices</h2>
+        </div>
+
+        <div class="important-notice-list" id="importantList">
+            <p style="padding:16px;color:#6a7280">Loading notices...</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =========================================================
+     SEARCH
+========================================================= -->
+
+<section class="notice-search">
+    <div class="container">
+
+        <div class="search-box">
+
+            <input type="search" id="noticeSearch" placeholder="Search notices...">
+
+            <!-- Old dropdown: hidden by notice.js, replaced by category chips -->
+            <select id="noticeCategory">
+                <option value="all">All Categories</option>
+                <option value="examination">Examination</option>
+                <option value="academics">Academics</option>
+                <option value="scholarship">Scholarship</option>
+                <option value="fee">Fee</option>
+                <option value="result">Result</option>
+                <option value="events">Events</option>
+                <option value="placement">Placement</option>
+                <option value="university">University</option>
+            </select>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- =========================================================
+     LATEST NOTICES (loaded from database by notice.js)
+     Category chips are inserted above the list by notice.js
+========================================================= -->
+
+<section class="latest-notices">
+    <div class="container">
+
+        <div class="section-heading">
+            <span>UPDATES</span>
+            <h2>Latest Notices</h2>
+        </div>
+
+        <div class="notice-list" id="noticeList"></div>
+
+    </div>
+</section>
+
+
+<!-- =========================================================
+     NOTICE ARCHIVE (loaded from database by notice.js)
+========================================================= -->
+
+<section class="notice-archive">
+    <div class="container">
+
+        <div class="section-heading">
+            <span>ARCHIVE</span>
+            <h2>Notice Archive</h2>
+        </div>
+
+        <div class="archive-years" id="archiveYears"></div>
+
+        <div class="notice-list" id="archiveList"></div>
+
+    </div>
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+    <!-- Add your existing footer content here -->
+</footer>
+
+
+<!-- =========================================================
+     SCRIPTS
+========================================================= -->
+
+<script src="assets/js/notice.js" charset="UTF-8"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+    var dropdown  = document.querySelector('.dropdown');
+    var toggle    = document.getElementById('moreToggle');
+    var navToggle = document.getElementById('navToggle');
+    var navList   = document.getElementById('navList');
+
+    function isMobileView() {
+        return window.innerWidth <= 900;
+    }
+
+    function closeDropdown() {
+        dropdown.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+    }
+
+    function flipDropdown() {
+        dropdown.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', dropdown.classList.contains('open'));
+    }
+
+    if (navToggle && navList) {
+        navToggle.addEventListener('click', function () {
+            navList.classList.toggle('open');
+        });
+    }
+
+    if (dropdown && toggle) {
+
+        toggle.addEventListener('click', function (e) {
+            if (isMobileView()) {
+                e.preventDefault();
+                flipDropdown();
+            }
+        });
+
+        toggle.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                flipDropdown();
+            }
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!dropdown.contains(e.target)) closeDropdown();
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeDropdown();
+        });
+
+        window.addEventListener('resize', function () {
+            if (!isMobileView()) closeDropdown();
+        });
+    }
+
+    /* Highlight current page in navbar */
+    var currentFile = window.location.pathname.split('/').pop() || 'index.html';
+
+    document.querySelectorAll('.nav-list > li > a').forEach(function (link) {
+        var linkFile = link.getAttribute('href').split('#')[0];
+        if (linkFile === currentFile) link.classList.add('active');
+    });
+
+});
+</script>
+<script src="/aux-chatbot/aux-chatbot.js"></script>
+
+
+</body>
+</html>

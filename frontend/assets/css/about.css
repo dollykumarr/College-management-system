@@ -1,0 +1,544 @@
+/* about.css - About page styles (navbar CSS about.html ke andar hai) */
+
+/* ===========================
+   ABOUT SECTION
+=========================== */
+header, .navbar{
+    background: linear-gradient(135deg, #0b3d91, #1769aa);
+    color: #1F2937;
+}
+
+.about{
+    padding:100px 0;
+    background:#f8fbff;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:2.5rem;
+    color:var(--primary-color);
+}
+
+.section-title p{
+    color:#666;
+    margin-top:10px;
+}
+
+.about-content{
+    display:flex;
+    align-items:center;
+    gap:60px;
+}
+
+.about-image{
+    flex:1;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.about-text{
+    flex:1;
+}
+
+.about-text h3{
+    font-size:2rem;
+    color:var(--primary-color);
+    margin-bottom:20px;
+}
+
+.about-text p{
+    color:#555;
+    margin-bottom:30px;
+    line-height:1.8;
+}
+
+.about-features{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-bottom:35px;
+}
+
+.about-features div{
+    font-weight:500;
+}
+
+/*=========================
+ABOUT HERO
+=========================*/
+
+.about-hero{
+    background:#f5f9ff;
+    padding:90px 0;
+    text-align:center;
+}
+
+.about-hero h1{
+    font-size:48px;
+    color:#0d3b66;
+    margin:20px 0;
+}
+
+.about-hero p{
+    max-width:850px;
+    margin:auto;
+    color:#555;
+    font-size:18px;
+    line-height:1.8;
+}
+
+.section-tag{
+    display:inline-block;
+    background:#ffd54f;
+    color:#003366;
+    padding:8px 20px;
+    border-radius:50px;
+    font-weight:600;
+}
+
+/*=========================
+COLLEGE HISTORY
+=========================*/
+
+.history{
+    padding:100px 0;
+    background:#ffffff;
+}
+
+.history-container{
+    display:flex;
+    align-items:center;
+    gap:70px;
+}
+
+.history-image{
+    flex:1;
+    position:relative;
+}
+
+.history-image img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+.history-year{
+    position:absolute;
+    right:-20px;
+    bottom:30px;
+    background: rgba(123, 96, 59, 0.107);
+    color:#fff;
+    padding:20px 30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+}
+
+.history-year span{
+    display:block;
+    font-size:34px;
+    font-weight:700;
+}
+
+.history-year p{
+    margin-top:5px;
+    font-size:15px;
+}
+
+.history-content{
+    flex:1;
+}
+
+.history-content h2{
+    font-size:42px;
+    color:#0d3b66;
+    margin:20px 0;
+}
+
+.history-content p{
+    font-size:17px;
+    line-height:1.9;
+    color:#555;
+    margin-bottom:22px;
+}
+
+/*=========================
+VISION • MISSION • MOTTO
+=========================*/
+
+.vision-section{
+    padding:100px 0;
+    background:#f8f9fc;
+}
+
+.section-title{
+    text-align:center;
+    max-width:750px;
+    margin:auto auto 60px;
+}
+
+.section-title h2{
+    font-size:42px;
+    color:#003366;
+    margin:20px 0;
+}
+
+.section-title p{
+    color:#666;
+    line-height:1.8;
+    font-size:17px;
+}
+
+.vision-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+}
+
+.vision-card{
+    background:#fff;
+    padding:40px 30px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.vision-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+}
+
+.vision-icon{
+    width:80px;
+    height:80px;
+    background:#003366;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:32px;
+    margin:auto auto 25px;
+}
+
+.vision-card h3{
+    color:#003366;
+    margin-bottom:18px;
+    font-size:28px;
+}
+
+.vision-card p{
+    color:#555;
+    line-height:1.8;
+}
+
+/* ==========================
+   COLLEGE AT A GLANCE
+========================== */
+
+.glance{
+    background:#ffffff;
+    padding:100px 0;
+}
+
+.glance-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:50px;
+}
+
+.glance-item{
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:16px;
+    padding:35px 25px;
+    text-align:center;
+    transition:0.3s;
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+}
+
+.glance-item:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+.glance-item i{
+    font-size:34px;
+    color:#003366;
+    margin-bottom:15px;
+}
+
+.glance-item h4{
+    font-size:20px;
+    color:#003366;
+    margin-bottom:10px;
+}
+
+.glance-item p{
+    color:#555;
+    font-size:16px;
+}
+
+/* ==========================
+   ADMINISTRATION
+========================== */
+
+.administration{
+    padding:100px 0;
+    background:#f8fafc;
+}
+
+.admin-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:50px;
+}
+
+.admin-card{
+    background:#fff;
+    padding:35px 25px;
+    border-radius:16px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.admin-card:hover{
+    transform:translateY(-8px);
+}
+
+.admin-card i{
+    font-size:40px;
+    color:#003366;
+    margin-bottom:20px;
+}
+
+.admin-card h3{
+    color:#003366;
+    margin-bottom:10px;
+}
+
+.admin-card p{
+    color:#555;
+}
+
+/* ==========================
+   FORMER PRINCIPALS
+========================== */
+
+.former-principal{
+    padding:100px 0;
+    background:#ffffff;
+}
+
+.table-responsive{
+    overflow-x:auto;
+    margin-top:40px;
+}
+
+.principal-table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.principal-table th{
+    background:#003366;
+    color:#fff;
+    padding:16px;
+    text-align:left;
+}
+
+.principal-table td{
+    padding:16px;
+    border-bottom:1px solid #e5e7eb;
+}
+
+.principal-table tr:hover{
+    background:#f8fafc;
+}
+
+/* ==========================
+   CAMPUS LOCATION
+========================== */
+
+.campus-location{
+    padding:100px 0;
+    background:#f8fafc;
+}
+
+.location-container{
+    display:grid;
+    grid-template-columns:1fr 1.4fr;
+    gap:40px;
+    margin-top:50px;
+}
+
+.location-info{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.info-box{
+    display:flex;
+    align-items:flex-start;
+    gap:18px;
+    background:#fff;
+    padding:20px;
+    border-radius:14px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.info-box i{
+    font-size:24px;
+    color:#003366;
+    margin-top:5px;
+}
+
+.info-box h4{
+    margin-bottom:5px;
+    color:#003366;
+}
+
+.info-box p{
+    color:#555;
+    line-height:1.6;
+}
+
+.map-box{
+    overflow:hidden;
+    border-radius:16px;
+    box-shadow:0 10px 30px rgba(0,0,0,.10);
+}
+
+
+.nav-toggle {
+  display: none;
+  background: transparent !important;
+  border: none !important;
+  padding: 12px 14px;
+  margin-left: auto;
+  cursor: pointer;
+}
+.nav-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  margin: 6px 0;
+  border-radius: 2px;
+}
+@media (max-width: 900px) {
+  .nav-toggle { display: block !important; }
+  .nav-inner {
+    flex-wrap: wrap !important;
+    align-items: flex-start !important;
+  }
+  .nav-list {
+    display: none !important;
+    flex-direction: column !important;
+    flex-basis: 100% !important;
+    width: 100% !important;
+  }
+  .nav-list.open { display: flex !important; }
+}
+/* ===== RESPONSIVE: TABLET ===== */
+@media (max-width: 900px) {
+    .about, .history, .vision-section, .glance,
+    .administration, .former-principal, .campus-location {
+        padding: 60px 0;
+    }
+
+    .about-content,
+    .history-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .about-image, .about-text,
+    .history-image, .history-content {
+        flex: none;
+        width: 100%;
+    }
+
+    .history-year {
+        right: 12px;
+        bottom: 12px;
+        padding: 12px 18px;
+    }
+    .history-year span { font-size: 24px; }
+
+    .location-container { grid-template-columns: 1fr; gap: 24px; }
+    .map-box iframe { width: 100%; height: 300px; }
+
+    .glance-grid,
+    .admin-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
+
+/* ===== RESPONSIVE: PHONE ===== */
+@media (max-width: 768px) {
+
+    /* Vision • Mission • Motto: swipe cards */
+    .vision-grid {
+        display: flex;
+        grid-template-columns: none;
+        gap: 16px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding: 6px 4px 20px;
+    }
+    .vision-card {
+        flex: 0 0 78%;
+        scroll-snap-align: center;
+        padding: 28px 20px;
+    }
+    .vision-icon { width: 64px; height: 64px; font-size: 26px; margin-bottom: 18px; }
+    .vision-card h3 { font-size: 22px; margin-bottom: 12px; }
+    .vision-card p { font-size: 15px; line-height: 1.7; }
+    .vision-card h3, .vision-card p {
+        word-break: normal;
+        overflow-wrap: normal;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-hero { padding: 60px 0; }
+    .about-hero h1 { font-size: 30px; }
+    .about-hero p { font-size: 16px; }
+
+    .section-title { margin-bottom: 35px; }
+    .section-title h2,
+    .history-content h2 { font-size: 28px; }
+    .about-text h3 { font-size: 24px; }
+    .history-content p { font-size: 16px; line-height: 1.8; }
+
+    .about-features { grid-template-columns: 1fr; }
+
+    .glance-item { padding: 22px 14px; }
+    .glance-item h4 { font-size: 16px; }
+    .glance-item p { font-size: 14px; }
+    .admin-grid { grid-template-columns: 1fr; }
+
+    .principal-table th,
+    .principal-table td {
+        padding: 10px;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+}

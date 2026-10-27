@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Academics at Ramgarh College - Courses, Departments, Faculty, Syllabus, Facilities and Campus Life">
+
+    <title>Academics | Ramgarh College</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- Academic CSS (page ka CSS) -->
+    <link rel="stylesheet" href="assets/css/academic.css">
+
+    <!-- Topbar + Navbar CSS (inline, taaki hamesha dikhe) -->
+    <style id="navbar-inline">
+  :root{
+    --navy:#0f2a4a;
+    --navy-deep:#081b30;
+    --gold:#c79a2f;
+    --gold-soft:#f4e9d0;
+    --ink:#1f2430;
+    --line:#e6e2d8;
+    --card:#ffffff;
+  }
+
+  /* ===== TOP INFO BAR ===== */
+  .topbar{
+    background:var(--navy-deep);
+    color:#cfd8e3;
+    font-size:13px;
+    text-align:center;
+    padding:6px 16px;
+  }
+
+  /* ===== NAVBAR ===== */
+  .navbar{
+    background:var(--navy);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
+  }
+  .nav-inner{
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:6px;
+    padding:0 20px;
+    flex-wrap:wrap;
+  }
+  .nav-list{
+    display:flex;
+    align-items:center;
+    list-style:none;
+    gap:2px;
+    flex-wrap:wrap;
+    margin:0;
+    padding:0;
+  }
+  .nav-list>li{position:relative;list-style:none;}
+  .nav-list>li>a{
+    display:block;
+    padding:16px 14px;
+    color:#eef2f7;
+    text-decoration:none;
+    font-size:14.5px;
+    font-weight:500;
+    white-space:nowrap;
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  .nav-list>li>a:hover{color:var(--gold);}
+  .nav-list>li>a.active{color:var(--gold);}
+
+  .dropdown-toggle{
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+    cursor:pointer;
+  }
+  .dropdown-arrow{font-size:10px;transition:transform .2s ease;}
+
+  .dropdown-menu{
+    position:absolute;
+    top:100%;
+    left:0;
+    min-width:250px;
+    margin:0;
+    padding:6px 0;
+    list-style:none;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    box-shadow:0 16px 34px rgba(0,0,0,.22);
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(8px);
+    transition:opacity .18s ease, transform .18s ease, visibility .18s;
+    z-index:1200;
+  }
+  .dropdown-menu li{list-style:none;}
+  .dropdown-menu li a{
+    display:block;
+    padding:11px 22px;
+    color:var(--ink);
+    text-decoration:none;
+    font-size:14.5px;
+    white-space:nowrap;
+    border-left:3px solid transparent;
+    transition:background .15s ease,color .15s ease,border-color .15s ease;
+  }
+  .dropdown-menu li a:hover,
+  .dropdown-menu li a.active-link{
+    background:var(--gold-soft);
+    color:#8a6a15;
+    border-left-color:var(--gold);
+  }
+  .dropdown:hover .dropdown-menu,
+  .dropdown.open .dropdown-menu{
+    opacity:1;visibility:visible;transform:translateY(0);
+  }
+  .dropdown:hover .dropdown-arrow,
+  .dropdown.open .dropdown-arrow{transform:rotate(180deg);}
+
+  .btn-login{
+    background:var(--gold);
+    color:var(--navy-deep) !important;
+    font-weight:700;
+    padding:10px 20px !important;
+    border-radius:6px;
+    margin-left:6px;
+  }
+    </style>
+
+</head>
+
+<body>
+
+<!-- =========================================================
+     TOP BAR + NAVBAR
+========================================================= -->
+
+<div class="topbar">Ramgarh College Ramgarh, Hazaribagh &nbsp;|&nbsp; Constituent University vinoba bhave</div>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+  <span></span><span></span><span></span>
+</button>
+    <ul class="nav-list" id="navList">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="academic.html">Academics</a></li>
+      <li><a href="admissions.html">Admissions</a></li>
+      <li><a href="notice.html">Notice</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="rti.html">RTI</a></li>
+      <li><a href="contact.html">Contact</a></li>
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" id="moreToggle" aria-haspopup="true" aria-expanded="false">
+          More <span class="dropdown-arrow">&#9662;</span>
+        </a>
+        <ul class="dropdown-menu" id="moreMenu">
+          <li><a href="more.html#ignou">IGNOU</a></li>
+          <li><a href="more.html#canteen">Canteen</a></li>
+          <li><a href="more.html#library">Library</a></li>
+          <li><a href="more.html#reading-room">Reading Room</a></li>
+          <li><a href="more.html#iqac">IQAC</a></li>
+          <li><a href="more.html#ncc">NCC</a></li>
+          <li><a href="more.html#nss">NSS</a></li>
+          <li><a href="more.html#multidisciplinary">Multidisciplinary Activities</a></li>
+          <li><a href="more.html#cs">CS</a></li>
+          <li><a href="more.html#sports">Sports</a></li>
+          <li><a href="more.html#hostel">Hostel</a></li>
+          <li><a href="more.html#iic">IIC</a></li>
+          
+        </ul>
+      </li>
+
+      <li><a href="../backend//scr/student-portal/login.php" class="btn-login">Student Login</a></li>
+    </ul>
+  </div>
+</header>
+
+
+<!-- =========================================================
+     ACADEMIC HERO
+========================================================= -->
+
+<section id="academic-hero">
+
+    <div class="academic-hero-overlay"></div>
+
+    <div class="container academic-hero-content">
+
+        <span class="hero-tag">ACADEMICS</span>
+
+        <h1>
+            Discover <span>•</span> Learn <span>•</span> Transform
+        </h1>
+
+        <p>
+            Explore quality education, diverse academic programs,
+            experienced faculty and a learning environment designed
+            to help students build a successful future.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#courses" class="btn btn-primary">Explore Courses</a>
+            <a href="#departments" class="btn btn-outline">Explore Departments</a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     COURSES OFFERED
+========================================================= -->
+
+<section id="courses" class="academic-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="section-tag">COURSES</span>
+            <h2>Courses Offered</h2>
+            <p>
+                Explore undergraduate, postgraduate and vocational
+                programs offered at Ramgarh College.
+            </p>
+        </div>
+
+        <!-- Undergraduate -->
+
+        <div class="course-category">
+
+            <h3>Undergraduate</h3>
+
+            <div class="course-grid">
+
+                <div class="course-card">
+                    <div class="course-icon">BA</div>
+                    <h4>B.A.</h4>
+                    <p>Bachelor of Arts</p>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">BSc</div>
+                    <h4>B.Sc.</h4>
+                    <p>Bachelor of Science</p>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">BC</div>
+                    <h4>B.Com.</h4>
+                    <p>Bachelor of Commerce</p>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">BCA</div>
+                    <h4>BCA</h4>
+                    <p>Bachelor of Computer Applications</p>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">BBA</div>
+                    <h4>BBA</h4>
+                    <p>Bachelor of Business Administration</p>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">LIS</div>
+                    <h4>Library &amp; Information Science</h4>
+                    <p>Undergraduate library and information studies.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Postgraduate -->
+
+        <div class="course-category">
+
+            <h3>Postgraduate</h3>
+
+            <div class="course-grid">
+
+                <div class="course-card">
+                    <div class="course-icon">MA</div>
+                    <h4>M.A.</h4>
+                    <p>Master of Arts</p>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">MSc</div>
+                    <h4>M.Sc.</h4>
+                    <p>Master of Science</p>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">MC</div>
+                    <h4>M.Com.</h4>
+                    <p>Master of Commerce</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Vocational -->
+
+        <div class="course-category">
+
+            <h3>Vocational</h3>
+
+            <div class="course-grid">
+
+                <div class="course-card">
+                    <div class="course-icon">BCA</div>
+                    <h4>BCA</h4>
+                    <p>Computer Applications</p>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">BBA</div>
+                    <h4>BBA</h4>
+                    <p>Business Administration</p>
+                </div>
+
+                <div class="course-card">
+                    <div class="course-icon">BLIS</div>
+                    <h4>BLIS</h4>
+                    <p>Bachelor of Library &amp; Information Science</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SYLLABUS
+========================================================= -->
+
+<section id="syllabus" class="academic-section syllabus-section">
+
+    <div class="container">
+
+        <div class="syllabus-content">
+
+            <div>
+                <span class="section-tag">ACADEMIC CURRICULUM</span>
+                <h2>Syllabus</h2>
+                <p>
+                    Download the latest syllabus and academic
+                    curriculum for different programs and courses.
+                </p>
+            </div>
+
+            <div class="syllabus-button">
+                <a href="#" class="btn btn-primary">Download Syllabus</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FACULTY
+========================================================= -->
+
+<section id="faculty" class="academic-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="section-tag">OUR FACULTY</span>
+            <h2>Faculty</h2>
+            <p>
+                Meet our experienced and dedicated teaching staff
+                who guide students throughout their academic journey.
+            </p>
+        </div>
+
+        <div class="faculty-grid">
+
+            <div class="faculty-card">
+                <div class="faculty-photo"><span>👨‍🏫</span></div>
+                <div class="faculty-info">
+                    <h3>Faculty Members</h3>
+                    <p>Experienced teaching professionals across different departments.</p>
+                    <a href="#">View Faculty →</a>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <div class="faculty-photo"><span>👩‍🏫</span></div>
+                <div class="faculty-info">
+                    <h3>Department Faculty</h3>
+                    <p>Dedicated faculty supporting academic excellence and student development.</p>
+                    <a href="#">View Faculty →</a>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <div class="faculty-photo"><span>🎓</span></div>
+                <div class="faculty-info">
+                    <h3>Academic Mentors</h3>
+                    <p>Academic guidance, mentoring and student support.</p>
+                    <a href="#">Meet Mentors →</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     DEPARTMENTS
+========================================================= -->
+
+<section id="departments" class="academic-section departments-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="section-tag">ACADEMIC DEPARTMENTS</span>
+            <h2>Departments</h2>
+            <p>Explore our academic departments and subject areas.</p>
+        </div>
+
+        <!-- Department Filter -->
+
+        <div class="department-filter">
+            <button class="department-filter-btn active" data-filter="all">All</button>
+            <button class="department-filter-btn" data-filter="arts">Arts</button>
+            <button class="department-filter-btn" data-filter="science">Science</button>
+            <button class="department-filter-btn" data-filter="commerce">Commerce</button>
+            <button class="department-filter-btn" data-filter="vocational">Vocational</button>
+        </div>
+
+        <div id="department-grid">
+
+            <!-- ARTS -->
+
+            <div class="department-card" data-category="arts">
+                <div class="department-card-header">
+                    <div class="department-icon">📚</div>
+                    <h3>Arts</h3>
+                </div>
+                <ul>
+                    <li>History</li>
+                    <li>Political Science</li>
+                    <li>Psychology</li>
+                    <li>Economics</li>
+                    <li>English</li>
+                    <li>Hindi</li>
+                    <li>Urdu</li>
+                    <li>Philosophy</li>
+                    <li>Khortha</li>
+                    <li>Sanskrit</li>
+                    <li>Sociology</li>
+                    <li>Geography</li>
+                </ul>
+                <a href="#">View Arts Department →</a>
+            </div>
+
+            <!-- SCIENCE -->
+
+            <div class="department-card" data-category="science">
+                <div class="department-card-header">
+                    <div class="department-icon">🧪</div>
+                    <h3>Science</h3>
+                </div>
+                <ul>
+                    <li>Physics</li>
+                    <li>Chemistry</li>
+                    <li>Mathematics</li>
+                    <li>Zoology</li>
+                </ul>
+                <a href="#">View Science Department →</a>
+            </div>
+
+            <!-- COMMERCE -->
+
+            <div class="department-card" data-category="commerce">
+                <div class="department-card-header">
+                    <div class="department-icon">📊</div>
+                    <h3>Commerce</h3>
+                </div>
+                <ul>
+                    <li>Accountancy</li>
+                    <li>Business Studies</li>
+                    <li>Economics</li>
+                </ul>
+                <a href="#">View Commerce Department →</a>
+            </div>
+
+            <!-- VOCATIONAL -->
+
+            <div class="department-card" data-category="vocational">
+                <div class="department-card-header">
+                    <div class="department-icon">💻</div>
+                    <h3>Vocational</h3>
+                </div>
+                <ul>
+                    <li>BCA (Computer Applications)</li>
+                    <li>BBA</li>
+                    <li>BLIS</li>
+                </ul>
+                <a href="#">View Vocational Department →</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     COLLEGE FACILITIES
+========================================================= -->
+
+<section id="facilities" class="academic-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="section-tag">CAMPUS FACILITIES</span>
+            <h2>College Facilities</h2>
+            <p>Enhancing Learning Experience.</p>
+        </div>
+
+        <div id="facility-grid">
+
+            <div class="facility-card">
+                <div class="facility-icon">📚</div>
+                <h3>Library</h3>
+                <p>Well-stocked library with a vast collection of books, journals and digital resources.</p>
+            </div>
+
+            <div class="facility-card">
+                <div class="facility-icon">🧪</div>
+                <h3>Science Laboratories</h3>
+                <p>Well-equipped laboratories for hands-on learning in various scientific disciplines.</p>
+            </div>
+
+            <div class="facility-card">
+                <div class="facility-icon">🖥️</div>
+                <h3>Computer Lab</h3>
+                <p>Modern computer laboratories with internet facilities for learning and research.</p>
+            </div>
+
+            <div class="facility-card">
+                <div class="facility-icon">🏋️</div>
+                <h3>Sports Ground</h3>
+                <p>A comprehensive sports facility for physical fitness and recreation.</p>
+            </div>
+
+            <div class="facility-card">
+                <div class="facility-icon">🎤</div>
+                <h3>Seminar Hall</h3>
+                <p>A modern seminar hall for workshops, lectures, conferences and academic events.</p>
+            </div>
+
+            <div class="facility-card">
+                <div class="facility-icon">🏠</div>
+                <h3>Girls Hostel</h3>
+                <p>A safe and secure accommodation facility for female students.</p>
+            </div>
+
+            <div class="facility-card">
+                <div class="facility-icon">🍽️</div>
+                <h3>Canteen</h3>
+                <p>A hygienic canteen offering a variety of nutritious food options.</p>
+            </div>
+
+            <div class="facility-card">
+                <div class="facility-icon">🚰</div>
+                <h3>Drinking Water</h3>
+                <p>Clean drinking water and separate washroom facilities.</p>
+            </div>
+
+            <div class="facility-card">
+                <div class="facility-icon">📶</div>
+                <h3>Wi-Fi Campus</h3>
+                <p>High-speed Wi-Fi connectivity throughout the campus.</p>
+            </div>
+
+            <div class="facility-card">
+                <div class="facility-icon">⚡</div>
+                <h3>Smart Classrooms</h3>
+                <p>Interactive learning spaces equipped with modern educational technology.</p>
+            </div>
+
+            <div class="facility-card">
+                <div class="facility-icon">☀️</div>
+                <h3>Solar Power</h3>
+                <p>Sustainable energy solutions using solar power for a greener campus.</p>
+            </div>
+
+            <div class="facility-card">
+                <div class="facility-icon">🩺</div>
+                <h3>Health Services</h3>
+                <p>On-campus health services and first-aid facilities for students and staff.</p>
+            </div>
+
+            <div class="facility-card">
+                <div class="facility-icon">🛡️</div>
+                <h3>Security</h3>
+                <p>Security personnel and surveillance systems for a safe campus environment.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CAMPUS LIFE
+========================================================= -->
+
+<section id="campus-life" class="academic-section campus-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="section-tag">CAMPUS LIFE</span>
+            <h2>Learn Beyond the Classroom.</h2>
+            <p>
+                Develop leadership, creativity, teamwork and
+                social responsibility through campus activities.
+            </p>
+        </div>
+
+        <div id="campus-grid">
+
+            <div class="campus-card">
+                <div class="campus-icon">🎓</div>
+                <h3>NCC</h3>
+                <p>Leadership, discipline and national service activities.</p>
+            </div>
+
+            <div class="campus-card">
+                <div class="campus-icon">🤝</div>
+                <h3>NSS</h3>
+                <p>
+                    Participate in national service schemes and develop
+                    leadership skills, community service and social awareness.
+                </p>
+            </div>
+
+            <div class="campus-card">
+                <div class="campus-icon">🎭</div>
+                <h3>Cultural Programs</h3>
+                <p>Dance, music, drama and annual cultural celebrations.</p>
+            </div>
+
+            <div class="campus-card">
+                <div class="campus-icon">🧑‍💻</div>
+                <h3>Workshops</h3>
+                <p>Technical and vocational workshops for students.</p>
+            </div>
+
+            <div class="campus-card">
+                <div class="campus-icon">🎤</div>
+                <h3>Guest Lectures</h3>
+                <p>Expert talks, seminars and academic interaction sessions.</p>
+            </div>
+
+            <div class="campus-card">
+                <div class="campus-icon">🌳</div>
+                <h3>Green Campus</h3>
+                <p>Clean, eco-friendly and green learning environment.</p>
+            </div>
+
+            <div class="campus-card">
+                <div class="campus-icon">📚</div>
+                <h3>Library Activities</h3>
+                <p>Book exhibitions, reading sessions and academic discussions.</p>
+            </div>
+
+            <div class="campus-card">
+                <div class="campus-icon">🎉</div>
+                <h3>Annual Fest</h3>
+                <p>Annual college festival with cultural and sports events.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ACADEMIC CONTACT
+========================================================= -->
+
+<section id="academic-contact">
+
+    <div class="container">
+
+        <span class="section-tag">ACADEMIC ENQUIRIES</span>
+
+        <h2>Have an Academic Question?</h2>
+
+        <p>
+            Contact the college for information about courses,
+            departments, faculty and academic programs.
+        </p>
+
+        <a href="contact.html" class="btn btn-primary">Contact Us</a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/academic.js"></script>
+<script src="/aux-chatbot/aux-chatbot.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var btn = document.getElementById('navToggle');
+  var list = document.getElementById('navList');
+  if (btn && list) {
+    btn.addEventListener('click', function () {
+      var open = list.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+  }
+});
+</script>
+
+</body>
+
+</html>

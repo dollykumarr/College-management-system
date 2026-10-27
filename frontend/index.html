@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Website Title -->
+    <title>Ramgarh College Ramgarh</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main CSS -->
+<link rel="stylesheet" href="assets/css/variables.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/navbar.css">
+<link rel="stylesheet" href="assets/css/hero.css">
+<link rel="stylesheet" href="assets/css/quick-links.css">
+<link rel="stylesheet" href="assets/css/about.css">
+<link rel="stylesheet" href="assets/css/features.css">
+<link rel="stylesheet" href="assets/css/notice.css">
+<link rel="stylesheet" href="assets/css/rti.css">
+<link rel="stylesheet" href="assets/css/more.css">
+<link rel="stylesheet" href="assets/css/statistics.css">
+<link rel="stylesheet" href="assets/css/principal.css">
+<link rel="stylesheet" href="assets/css/footer.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="stylesheet" href="assets/css/gallery.css">
+
+
+
+</head>
+
+
+
+<body>
+
+    <!-- ================= TOP BAR ================= -->
+
+<!-- ================= TOP BAR (animated ticker) - all in one ================= -->
+<!-- Isse index.html me purane <div class="top-bar"> ... </div> ki jagah paste karo. Alag CSS file ki zaroorat nahi. -->
+
+<style>
+.ticker-bar{
+    --ticker-time: 40s;
+    background: linear-gradient(90deg, #071a33, #0d2f5c 50%, #071a33);
+    border-bottom: 2px solid #f5b301;
+    overflow: hidden;
+    width: 100%;
+}
+.ticker-bar .ticker{
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+            mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+}
+.ticker-bar .ticker-track{
+    display: flex;
+    width: max-content;
+    animation: tickerMove 40s linear infinite;
+}
+.ticker-bar .ticker:hover .ticker-track{
+    animation-play-state: paused;
+}
+.ticker-bar .ticker-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-shrink: 0;
+    min-width: 100vw;
+}
+.ticker-bar .ticker-item{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .3px;
+    color: #e8eef7;
+    white-space: nowrap;
+}
+.ticker-bar .ticker-item i{
+    color: #f5b301;
+    font-size: 14px;
+}
+.ticker-bar .ticker-item::after{
+    content: "\2022";
+    color: #f5b301;
+    margin-left: 48px;
+    font-size: 18px;
+    line-height: 1;
+}
+@keyframes tickerMove{
+    from{ transform: translateX(0); }
+    to  { transform: translateX(-50%); }
+}
+@media (max-width: 600px){
+    .ticker-bar .ticker-track{ animation-duration: 32s; }
+    .ticker-bar .ticker-item{ font-size: 13px; padding: 8px 0; }
+}
+</style>
+
+<div class="ticker-bar">
+    <div class="ticker">
+        <div class="ticker-track">
+
+            <div class="ticker-group">
+                <span class="ticker-item"><i class="fa-solid fa-phone"></i> +91-65453-22222</span>
+                <span class="ticker-item"><i class="fa-solid fa-envelope"></i> principal@ramgarhcollege.ac.in</span>
+                <span class="ticker-item"><i class="fa-solid fa-clock"></i> Mon - Sat : 9:00 AM - 5:00 PM</span>
+            </div>
+
+            <!-- same content ka copy (seamless loop ke liye, ise hatana mat) -->
+            <div class="ticker-group" aria-hidden="true">
+                <span class="ticker-item"><i class="fa-solid fa-phone"></i> +91-65453-22222</span>
+                <span class="ticker-item"><i class="fa-solid fa-envelope"></i> principal@ramgarhcollege.ac.in</span>
+                <span class="ticker-item"><i class="fa-solid fa-clock"></i> Mon - Sat : 9:00 AM - 5:00 PM</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <!-- ================= HEADER ================= -->
+     <header class="header">
+
+    <!-- Top Header -->
+    <div class="header-top">
+
+        <div class="container header-top-content">
+
+            <div class="college-brand">
+
+                <img src="assets/images/logo/logo.png"
+                     alt="Ramgarh College Logo"
+                     class="college-logo">
+
+                <div class="college-info">
+
+                    <h1>रामगढ़ कॉलेज, रामगढ़</h1>
+
+                    <h2>Ramgarh College, Ramgarh</h2>
+
+                    <p>
+                        A Constituent Unit of Vinoba Bhave University, Hazaribagh
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Navigation -->
+
+    <div class="navbar">
+
+        <div class="container nav-container">
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+  <span></span><span></span><span></span>
+</button>
+    
+
+            <nav class="nav-menu">
+
+                <ul class="nav-links">
+
+                    <li><a href="index.html" class="active">Home</a></li>
+
+                    <li><a href="about.html">About</a></li>
+
+                    <li><a href="academic.html">Academics</a></li>
+
+                    <li><a href="admissions.html">Admissions</a></li>
+
+                   <li><a href="notice.html">Notice</a></li>
+
+                    <li><a href="gallery.html">Gallery</a></li>
+
+                    <li><a href="rti.html">RTI</a></li>
+
+                     <li><a href="contact.html">Contact</a></li>
+
+                      <!--more start-->
+                       <li class="nav-item dropdown">
+                     <a href="#" class="nav-link dropdown-toggle" id="moreToggle" aria-haspopup="true" aria-expanded="false">
+                    More <span class="dropdown-arrow">&#9662;</span>
+                        </a>
+                     <ul class="dropdown-menu" id="moreMenu">
+                    <li><a href="more.html#ignou">IGNOU</a></li>
+                     <li><a href="more.html#canteen">Canteen</a></li>
+                     <li><a href="more.html#library">Library</a></li>
+                     <li><a href="more.html#reading-room">Reading Room</a></li>
+                     <li><a href="more.html#iqac">IQAC</a></li>
+                     <li><a href="more.html#ncc">NCC</a></li>
+                     <li><a href="more.html#nss">NSS</a></li>
+                     <li><a href="more.html#multidisciplinary">Multidisciplinary </a></li>
+                     <li><a href="more.html#cs">CS</a></li>
+                     <li><a href="more.html#sports">Sports</a></li>
+                     <li><a href="more.html#hostel">Hostel</a></li>
+                     <li><a href="more.html#IIC">IIC</a></li>
+                     
+                     </ul>
+                   </li>
+
+    
+
+                    <!--more end-->
+
+
+                </ul>
+                
+            </nav>
+
+            <a href="../backend/scr/student-portal/login.php" class="btn-apply">
+                Student Login
+            </a>
+
+        </div>
+
+    </div>
+
+    <style>
+@media (max-width: 768px) {
+  .nav-container { flex-wrap: wrap; }
+  .nav-menu.open {
+    display: block !important;
+    position: static !important;
+    width: 100%;
+    background: #1a5fa8;
+  }
+  .nav-menu.open .nav-links {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+  }
+  .nav-menu.open .nav-links li {
+    width: 100%;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+  .nav-menu.open .nav-links a {
+    display: block;
+    padding: 12px 16px;
+    color: #fff;
+  }
+}
+</style>
+
+</header>
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+      <section class="hero">
+
+    <div class="slider">
+
+        <div class="slide active">
+            <img src="assets/images/hero/slide1.jpg" alt="Slide 1">
+        </div>
+
+        <div class="slide">
+            <img src="assets/images/hero/slide2.jpg" alt="Slide 2">
+        </div>
+
+        <div class="slide">
+            <img src="assets/images/hero/slide3.jpg" alt="Slide 3">
+        </div>
+
+        <div class="slide">
+            <img src="assets/images/hero/slide4.jpg" alt="Slide 4">
+        </div>
+
+        <div class="slide">
+            <img src="assets/images/hero/slide5.jpg" alt="Slide 5">
+        </div>
+
+        <div class="slide">
+            <img src="assets/images/hero/slide6.jpg" alt="Slide 6">
+        </div>
+
+        <div class="slide">
+            <img src="assets/images/hero/slide7.jpg" alt="Slide 7">
+        </div>
+
+        <div class="slide">
+            <img src="assets/images/hero/slide8.jpg" alt="Slide 8">
+        </div>
+
+        <div class="slide">
+            <img src="assets/images/hero/slide9.jpg" alt="Slide 9">
+        </div>
+
+        <div class="slide">
+            <img src="assets/images/hero/slide10.jpg" alt="Slide 10">
+        </div>
+
+        <div class="slide">
+            <img src="assets/images/hero/slide11.jpg" alt="Slide 11">
+        </div>
+
+         <div class="slide">
+            <img src="assets/images/hero/slide12.jpg" alt="Slide 12">
+        </div>
+
+         <div class="slide">
+            <img src="assets/images/hero/slide13.jpg" alt="Slide 13">
+        </div>
+
+
+
+        
+
+    </div>
+
+    <div class="hero-overlay">
+
+        <div class="container">
+
+            <div class="hero-text">
+
+                <h1>Welcome to Ramgarh College</h1>
+
+                <p>
+                    Empowering students through quality education,
+                    innovation, and excellence.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#" class="btn-primary">
+                        Apply Now
+                    </a>
+
+                    <a href="#" class="btn-secondary">
+                        Explore Courses
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="quick-links">
+
+    <div class="container">
+
+        <div class="quick-links-grid">
+
+            <div class="quick-card">
+                <i class="fas fa-user-graduate"></i>
+                <h3>Admissions</h3>
+                <p>Apply for admission and begin your academic journey.</p>
+            </div>
+
+            <div class="quick-card">
+                <i class="fas fa-book-open"></i>
+                <h3>Courses</h3>
+                <p>Explore undergraduate and postgraduate programs.</p>
+            </div>
+
+            <div class="quick-card">
+                <i class="fas fa-bullhorn"></i>
+                <h3>Notice Board</h3>
+                <p>Stay updated with the latest college announcements.</p>
+            </div>
+
+            <div class="quick-card">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Contact</h3>
+                <p>Reach out to us for any queries or assistance.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="about">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>About Ramgarh College</h2>
+            <p>Providing quality education and shaping future leaders.</p>
+        </div>
+
+        <div class="about-content">
+
+            <!-- Image -->
+
+            <div class="about-image">
+
+                <img src="assets/images/college.png"
+                     alt="Ramgarh College">
+
+            </div>
+
+            <!-- Text -->
+
+            <div class="about-text">
+
+                <h3>Empowering Students Through Excellence</h3>
+
+                <p>
+                    Ramgarh College has been dedicated to academic excellence,
+                    innovation, and holistic student development. We offer
+                    undergraduate and postgraduate programs supported by
+                    experienced faculty and modern facilities.
+                </p>
+
+                <div class="about-features">
+
+                    <div>✔ Established in 1963</div>
+
+                    <div>✔ NAAC Accredited</div>
+
+                    <div>✔ Experienced Faculty</div>
+
+                    <div>✔ Smart Classrooms</div>
+
+                    <div>✔ Modern Library</div>
+
+                    <div>✔ Placement Support</div>
+
+                </div>
+
+                <a href="about.html" class="btn-primary">
+                    Read More
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= PRINCIPAL MESSAGE ================= -->
+
+<section class="principal">
+
+    <div class="container principal-container">
+
+        <div class="principal-image">
+
+            <img src="assets/images/principal.jpg" alt="Principal">
+
+        </div>
+
+        <div class="principal-content">
+
+            <span class="section-tag">
+                Principal's Message
+            </span>
+
+            <h2>
+                हर विचार एक शुरुआत है,
+                हर विद्यार्थी एक संभावना है।
+
+              Building Futures Through Knowledge
+            </h2>
+
+            <p>
+                Dear Students,
+            </p>
+
+
+                <p1>
+                    where knowledge inspires curiosity, values shape character, 
+                    and every learner is empowered to build a meaningful future.
+
+                   It gives me immense pleasure to welcome you to
+                   Ramgarh College. Our institution is committed
+                  to academic excellence, innovation,
+                  discipline, and holistic development.
+
+                  We strive to create responsible citizens
+                  capable of contributing positively to society.
+
+                  I invite every student to make the most of the
+                  opportunities available on our campus.
+
+                </p>
+
+            <h4>
+                Prof.(Dr.) Bimal Kumar Mishra
+            </h4>
+
+            <span class="designation">
+                Principal
+            </span>
+
+            <br>
+               <a href="https://drbimalmishra.com"
+                 target="_blank"
+                  class="profile-btn">
+                    View Full Profile
+                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+        </div>
+
+    </div>
+
+</section>
+<section class="features">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Why Choose Ramgarh College?</h2>
+
+            <p>
+                We provide an environment where students grow academically,
+                professionally, and personally.
+            </p>
+
+        </div>
+
+        <div class="features-grid">
+
+            <div class="feature-card">
+
+                <i class="fas fa-chalkboard-teacher"></i>
+
+                <h3>Expert Faculty</h3>
+
+                <p>
+                    Learn from experienced professors dedicated to academic excellence.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fas fa-university"></i>
+
+                <h3>Modern Campus</h3>
+
+                <p>
+                    Spacious classrooms, laboratories, library, and digital facilities.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fas fa-briefcase"></i>
+
+                <h3>Placement Support</h3>
+
+                <p>
+                    Career guidance, internships, and placement assistance for students.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fas fa-globe"></i>
+
+                <h3>Holistic Development</h3>
+
+                <p>
+                    Sports, cultural activities, clubs, and leadership opportunities.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="updates">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Latest Updates</h2>
+            <p>Stay informed with the latest notices and upcoming events.</p>
+        </div>
+
+        <div class="updates-grid">
+
+            <!-- Notices -->
+            <div class="update-card">
+
+                <h3>Latest Notices</h3>
+
+                <ul class="update-list">
+
+                    <li>
+                        <span>📢</span>
+                        Admission Open for 2026 Session
+                    </li>
+
+                    <li>
+                        <span>📢</span>
+                        Semester Examination Form Available
+                    </li>
+
+                    <li>
+                        <span>📢</span>
+                        Scholarship Application Notice
+                    </li>
+
+                    <li>
+                        <span>📢</span>
+                        Holiday Notice for Independence Day
+                    </li>
+
+                </ul>
+
+                <a href="notice.html">View All Notices →</a>
+
+            </div>
+
+            <!-- Events -->
+
+            <div class="update-card">
+
+                <h3>Upcoming Events</h3>
+
+                <ul class="update-list">
+
+                    <li>
+                        <span>📅</span>
+                        Orientation Program
+                    </li>
+
+                    <li>
+                        <span>📅</span>
+                        Annual Sports Meet
+                    </li>
+
+                    <li>
+                        <span>📅</span>
+                        Tech Fest 2026
+                    </li>
+
+                    <li>
+                        <span>📅</span>
+                        Alumni Meet
+                    </li>
+
+                </ul>
+
+                <a href="https://www.vbu.ac.in/calendar">View Calendar →</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="statistics">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Our Achievements</h2>
+            <p>Numbers that reflect our commitment to excellence.</p>
+        </div>
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+                <h3>
+                <span class="counter" 
+                data-target="5000">0</span><span class="pluse">+</span>
+                </h3>
+                <p>Students</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 ><span
+                 class="counter" data-target="150">0</span>
+                <span class="pluse">+</span>
+
+                </h3>
+                <p>Faculty Members</p>
+            </div>
+
+            <div class="stat-card">
+                <h3> <span class="counter" data-target="30">0</span>
+                <span class="pluse">+</span></h3>
+                <p>Departments</p>
+            </div>
+
+            <div class="stat-card">
+                <h3> <span class="counter" data-target="95">0</span>
+                <span class="modulus">%</span></h3>
+                <p>Placement Rate </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="courses">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Courses We Offer</h2>
+            <p>Choose from our wide range of undergraduate and postgraduate programs.</p>
+        </div>
+
+        <div class="courses-grid">
+
+            <div class="course-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>BCA</h3>
+                <p>Duration: 3 Years</p>
+                <a href="#">Learn More</a>
+            </div>
+
+            <div class="course-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>B.lis</h3>
+                <p>Duration: 3 Years</p>
+                <a href="#">Learn More</a>
+            </div>
+
+            <div class="course-card">
+                <i class="fas fa-flask"></i>
+                <h3>B.Sc</h3>
+                <p>Duration: 4 Years</p>
+                <a href="#">Learn More</a>
+            </div>
+
+            <div class="course-card">
+                <i class="fas fa-book"></i>
+                <h3>BA</h3>
+                <p>Duration: 4 Years</p>
+                <a href="#">Learn More</a>
+            </div>
+
+            <div class="course-card">
+                <i class="fas fa-calculator"></i>
+                <h3>B.Com</h3>
+                <p>Duration: 4 Years</p>
+                <a href="#">Learn More</a>
+            </div>
+
+            <div class="course-card">
+                <i class="fas fa-database"></i>
+                <h3>MCA</h3>
+                <p>Duration: 2 Years</p>
+                <a href="#">Learn More</a>
+            </div>
+
+        </div>
+
+    </div>
+
+    
+
+</section>
+    </main>
+
+
+   
+
+    <!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <!-- College Info -->
+        <div class="footer-col">
+
+            <h3>Ramgarh College</h3>
+
+            <p>
+                Building Futures Through Knowledge by providing quality education,
+                innovation, and opportunities for every student.
+            </p>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+
+             <!-- ================= COLLEGE MANAGEMENT PORTAL ================= -->
+
+<a href="../backend/scr/admin-panel/login.php" class="college-management-card">
+
+    <div class="management-lock">
+        <i class="fa-solid fa-lock"></i>
+    </div>
+
+    <div class="management-content">
+        <span class="management-label">SECURE ACCESS</span>
+
+        <h4>College Management Portal</h4>
+
+        <p>Authorized administrative access</p>
+    </div>
+
+    <div class="management-arrow">
+        <i class="fa-solid fa-arrow-right"></i>
+    </div>
+
+</a>
+
+
+
+
+        </div>
+
+
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </div>
+
+        <!-- Important Links -->
+        <div class="footer-col">
+
+            <h3>Important Links</h3>
+
+            <ul>
+                <li><a href="https://www.vbu.ac.in/login">University Website </a></li>
+                <li><a href="https://www.vbu.ac.in/notice/result">VBU Results</a></li>
+                <li><a href="https://www.vbu.ac.in/notice/admission">VBU Admission Portal</a></li>
+                <li><a href="https://www.vbuuniv.in/login">VBU Examination Portal</a></li>
+                <li><a href="https://www.vbuuniv.in/login">Admit Card</a></li>
+                <li><a href="https://www.vbu.ac.in/notice/Notice"> Notice Board</a></li>
+                <li><a href=https://www.vbu.ac.in/UGSyllabNEP>UG Syllabus NEP (FYUGP)</a></li>
+                <li><a href="https://ekalyan.cgg.gov.in/">e-Kalyan Scholarship Portal</a></li>
+                <li><a href="https://www.digilocker.gov.in/" target="_blank">DigiLocker</a></li>
+                <li><a href="#">e-book</a></li>
+                <li><a href="../backend/scr/student-portal/login.php">Student Login</a></li>
+                <li><a href="https://www.vbu.ac.in/calendar">Academic Calendar</a></li>
+                <li><a href="https://universities.jharkhand.gov.in/">Jharkhand Universities</a></li>
+                
+            </ul>
+
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+
+            <h3>Contact Us</h3>
+
+            <p><i class="fas fa-map-marker-alt"></i> Ramgarh, Jharkhand</p>
+
+            <p><i class="fas fa-phone"></i> +91 XXXXX XXXXX</p>
+
+            <p><i class="fas fa-envelope"></i> info@ramgarhcollege.ac.in</p>
+
+            <div class="social-icons">
+
+                <a href=" https://share.google/hUqNL7MEWDPwrlK6R" target="_blank"><i class="fab fa-facebook-f"></i></a>&nbsp;
+
+                <a href="https://www.instagram.com/ramgarhcollegeinfo?igsi=eWdoMnF5ZTlqbGpw" target="_blank"><i class="fab fa-instagram"></i></a>&nbsp;
+
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>&nbsp;
+
+                <a href="#"><i class="fab fa-youtube"></i></a>&nbsp;
+
+                <a href="#"><i class="fab fa-twitter"></i></a>&nbsp;
+
+            </div>
+
+        </div>
+
+    </div>
+
+       
+
+<!-- ================= END COLLEGE MANAGEMENT PORTAL ================= -->
+
+
+    <!-- ================= FOOTER BOTTOM ================= -->
+<div class="footer-bottom">
+
+    <p>
+        &copy; 2026 Ramgarh College Ramgarh. All Rights Reserved.
+    </p>
+
+    <!-- Developer credit -->
+    <p class="developer-credit">
+        Designed &amp; Developed by <strong>Dolly Kumari Thakur</strong>
+        &nbsp;|&nbsp;
+        <a href="dollykumarr9@gmail.com">dollykumarr9@gmail.com</a>
+    </p>
+
+</div>
+
+</footer>
+   
+
+    
+
+    <!-- Main JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/counter.js"></script>
+    <script src="assets/js/slider.js"></script>
+    <script src="assets/js/rti.js"></script>
+    <script src="assets/js/more.js"></script>
+    <script src="/aux-chatbot/aux-chatbot.js"></script>
+
+
+
+
+
+</body>
+
+</html>

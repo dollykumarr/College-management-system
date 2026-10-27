@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+  :root{
+    --navy:#0f2a4a;
+    --navy-deep:#081b30;
+    --gold:#c79a2f;
+    --gold-soft:#f4e9d0;
+    --ink:#1f2430;
+    --line:#e6e2d8;
+    --card:#ffffff;
+  }
+  *{box-sizing:border-box;}
+
+  /* ===== TOP INFO BAR ===== */
+  .topbar{
+    background:var(--navy-deep);
+    color:#cfd8e3;
+    font-size:13px;
+    text-align:center;
+    padding:6px 16px;
+  }
+
+  /* ===== NAVBAR ===== */
+  .navbar{
+    background:var(--navy);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
+  }
+  .nav-inner{
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:6px;
+    padding:0 20px;
+    flex-wrap:wrap;
+  }
+  .nav-list{
+    display:flex;
+    align-items:center;
+    list-style:none;
+    gap:2px;
+    flex-wrap:wrap;
+    margin:0;
+    padding:0;
+  }
+  .nav-list>li{position:relative;}
+  .nav-list>li>a{
+    display:block;
+    padding:16px 14px;
+    color:#eef2f7;
+    text-decoration:none;
+    font-size:14.5px;
+    font-weight:500;
+    white-space:nowrap;
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  .nav-list>li>a:hover{color:var(--gold);}
+  .nav-list>li>a.active{color:var(--gold);}
+
+  .dropdown-toggle{
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+    cursor:pointer;
+  }
+  .dropdown-arrow{font-size:10px;transition:transform .2s ease;}
+
+  .dropdown-menu{
+    position:absolute;
+    top:100%;
+    left:0;
+    min-width:250px;
+    margin:0;
+    padding:6px 0;
+    list-style:none;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    box-shadow:0 16px 34px rgba(0,0,0,.22);
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(8px);
+    transition:opacity .18s ease, transform .18s ease, visibility .18s;
+    z-index:1200;
+  }
+  .dropdown-menu li{list-style:none;}
+  .dropdown-menu li a{
+    display:block;
+    padding:11px 22px;
+    color:var(--ink);
+    text-decoration:none;
+    font-size:14.5px;
+    white-space:nowrap;
+    border-left:3px solid transparent;
+    transition:background .15s ease,color .15s ease,border-color .15s ease;
+  }
+  .dropdown-menu li a:hover,
+  .dropdown-menu li a.active-link{
+    background:var(--gold-soft);
+    color:#8a6a15;
+    border-left-color:var(--gold);
+  }
+  .dropdown:hover .dropdown-menu,
+  .dropdown.open .dropdown-menu{
+    opacity:1;visibility:visible;transform:translateY(0);
+  }
+  .dropdown:hover .dropdown-arrow,
+  .dropdown.open .dropdown-arrow{transform:rotate(180deg);}
+
+  .btn-login{
+    background:var(--gold);
+    color:var(--navy-deep) !important;
+    font-weight:700;
+    padding:10px 20px !important;
+    border-radius:6px;
+    margin-left:6px;
+  }
+
+  .nav-toggle{
+    display:none;
+    background:none;
+    border:none;
+    color:#fff;
+    font-size:24px;
+    padding:12px 16px;
+    cursor:pointer;
+  }
+
+  @media (max-width:900px){
+    .nav-toggle{display:block;position:absolute;right:10px;top:8px;}
+    .nav-inner{justify-content:space-between;}
+    .nav-list{
+      display:none;
+      width:100%;
+      flex-direction:column;
+      align-items:stretch;
+      background:var(--navy);
+      padding-bottom:10px;
+    }
+    .nav-list.open{display:flex;}
+    .nav-list>li>a{padding:14px 20px;}
+    .dropdown-menu{
+      position:static;
+      box-shadow:none;border:none;
+      border-left:2px solid rgba(255,255,255,.15);
+      border-radius:0;
+      margin-left:16px;
+      background:var(--navy-deep);
+      display:none;
+      opacity:1;visibility:visible;transform:none;
+    }
+    .dropdown-menu li a{color:#dbe3ee;}
+    .dropdown-menu li a:hover,
+    .dropdown-menu li a.active-link{background:rgba(199,154,47,.15);color:var(--gold);}
+    .dropdown.open .dropdown-menu{display:block;}
+    .btn-login{margin:10px 20px;text-align:center;}
+  }
+</style>
+
+<div class="topbar">Ramgarh College Ramgarh, Hazaribagh &nbsp;|&nbsp; Constituent University vinoba bhave</div>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+    <ul class="nav-list" id="navList">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="academic.html">Academics</a></li>
+      <li><a href="admissions.html">Admissions</a></li>
+      <li><a href="notice.html">Notice</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="rti.html">RTI</a></li>
+      <li><a href="contact.html">Contact</a></li>
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" id="moreToggle" aria-haspopup="true" aria-expanded="false">
+          More <span class="dropdown-arrow">&#9662;</span>
+        </a>
+        <ul class="dropdown-menu" id="moreMenu">
+          <li><a href="more.html#ignou">IGNOU</a></li>
+          <li><a href="more.html#canteen">Canteen</a></li>
+          <li><a href="more.html#library">Library</a></li>
+          <li><a href="more.html#reading-room">Reading Room</a></li>
+          <li><a href="more.html#iqac">IQAC</a></li>
+          <li><a href="more.html#ncc">NCC</a></li>
+          <li><a href="more.html#nss">NSS</a></li>
+          <li><a href="more.html#multidisciplinary">Multidisciplinary Activities</a></li>
+          <li><a href="more.html#cs">CS</a></li>
+          <li><a href="more.html#sports">Sports</a></li>
+          <li><a href="more.html#hostel">Hostel</a></li>
+          <li><a href="more.html#iic">IIC</a></li>
+          
+        </ul>
+      </li>
+
+      <li><a href="../backend//scr/student-portal/login.php" class="btn-login">Student Login</a></li>
+    </ul>
+  </div>
+</header>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  const dropdown = document.querySelector('.dropdown');
+  const toggle = document.getElementById('moreToggle');
+  const navToggle = document.getElementById('navToggle');
+  const navList = document.getElementById('navList');
+
+  function isMobileView() {
+    return window.innerWidth <= 900;
+  }
+
+  if (navToggle && navList) {
+    navToggle.addEventListener('click', function () {
+      navList.classList.toggle('open');
+    });
+  }
+
+  if (dropdown && toggle) {
+    toggle.addEventListener('click', function (e) {
+      if (isMobileView()) {
+        e.preventDefault();
+        dropdown.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', dropdown.classList.contains('open'));
+      }
+    });
+
+    toggle.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        dropdown.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', dropdown.classList.contains('open'));
+      }
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        dropdown.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    window.addEventListener('resize', function () {
+      if (!isMobileView()) {
+        dropdown.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-list > li > a').forEach(function (link) {
+    const linkFile = link.getAttribute('href').split('#')[0];
+    if (linkFile === currentFile) {
+      link.classList.add('active');
+    }
+  });
+
+});
+</script>
+
+
+
+
+
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Contact Ramgarh College - Address, Phone, Email and Campus Location">
+
+    <title>Contact | Ramgarh College</title>
+
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Navbar CSS -->
+    <link rel="stylesheet" href="assets/css/navbar.css">
+
+    <!-- Contact CSS -->
+    <link rel="stylesheet" href="assets/css/contact.css">
+
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="assets/css/footer.css">
+
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header>
+
+    <!-- आपका existing navbar यहाँ रहेगा -->
+
+</header>
+
+
+<!-- =========================================================
+     CONTACT HERO
+========================================================= -->
+
+<section class="contact-hero">
+
+    <div class="container">
+
+        <span class="contact-tag">
+            CONTACT US
+        </span>
+
+        <h1>
+            Get in Touch
+        </h1>
+
+        <p>
+            Have a question or need information?
+            We're here to help.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT INFORMATION
+========================================================= -->
+
+<section class="contact-section">
+
+    <div class="container">
+
+        <div class="contact-grid">
+
+
+            <!-- Contact Information -->
+
+            <div class="contact-info">
+
+                <span class="section-label">
+                    CONTACT INFORMATION
+                </span>
+
+                <h2>
+                    We'd Love to Hear From You
+                </h2>
+
+                <p>
+                    For admissions, academics, examinations or
+                    general enquiries, please contact Ramgarh College.
+                </p>
+
+
+                <!-- Address -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        &#128205;
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            College Address
+                        </h3>
+
+                        <p>
+                            Ramgarh College,<br>
+                            Ramgarh, Jharkhand, India
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Phone -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        &#9742;
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Phone
+                        </h3>
+
+                        <p>
+                            <a href="tel:+910000000000">
+                                +91 XXXXX XXXXX
+                            </a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Email -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        &#9993;
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Email
+                        </h3>
+
+                        <p>
+                            <a href="mailto:info@ramgarhcollege.ac.in">
+                                info@ramgarhcollege.ac.in
+                            </a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Office Hours -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                         &#128336;
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Office Hours
+                        </h3>
+
+                        <p>
+                            Monday - Saturday<br>
+                            10:00 AM - 4:00 PM
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 CONTACT FORM
+            ================================================== -->
+
+            <div class="contact-form-wrapper">
+
+                <span class="section-label">
+                    SEND A MESSAGE
+                </span>
+
+                <h2>
+                    How Can We Help?
+                </h2>
+
+
+                <form id="contactForm">
+
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Your Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="subject">
+                            Subject
+                        </label>
+
+                        <input
+                            type="text"
+                            id="subject"
+                            name="subject"
+                            placeholder="Enter subject"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Write your message..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="contact-submit">
+                        Send Message
+                    </button>
+
+
+                    <p
+                        id="formMessage"
+                        class="form-message">
+                    </p>
+
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CAMPUS LOCATION
+========================================================= -->
+
+<section class="contact-map">
+
+    <div class="container">
+
+        <div class="map-heading">
+
+            <span class="section-label">
+                LOCATION
+            </span>
+
+            <h2>
+                Find Us
+            </h2>
+
+        </div>
+
+
+        <div class="map-container">
+
+            <!--
+                बाद में यहाँ Google Maps embed
+                लगाया जा सकता है.
+            -->
+
+            <iframe
+                src="https://www.google.com/maps?q=Ramgarh%20College%20Jharkhand&output=embed"
+                loading="lazy"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     QUICK CONTACT
+========================================================= -->
+
+<section class="quick-contact">
+
+    <div class="container">
+
+        <h2>
+            Need Quick Assistance?
+        </h2>
+
+        <p>
+            Contact the college office directly for
+            immediate assistance.
+        </p>
+
+        <div class="quick-contact-buttons">
+
+            <a href="tel:+910000000000">
+                Call College
+            </a>
+
+            <a href="mailto:info@ramgarhcollege.ac.in">
+                Send Email
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="footer-bottom">
+
+    <p>
+        &copy; 2026 Ramgarh College Ramgarh. All Rights Reserved.
+    </p>
+
+    <!-- Developer credit -->
+    <p class="developer-credit">
+        Designed &amp; Developed by <strong>Dolly Kumari Thakur</strong>
+        &nbsp;|&nbsp;
+        <a href="dollykumarr9@gmail.com">dollykumarr9@gmail.com</a>
+    </p>
+
+</div>
+
+</footer>
+
+
+<!-- Contact JavaScript -->
+<script src="assets/js/contact.js"></script>
+<script src="/aux-chatbot/aux-chatbot.js"></script>
+
+
+</body>
+
+</html>

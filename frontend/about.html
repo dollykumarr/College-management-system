@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About - Ramgarh College</title>
+
+    <link rel="icon" href="assets/images/favicon.png">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- about.css sabse last mein (isme navbar + topbar + about ka poora CSS hai) -->
+    <link rel="stylesheet" href="assets/css/about.css">
+
+    <!-- Navbar + Topbar CSS (inline, taaki hamesha dikhe) -->
+    <style id="navbar-inline">
+:root{
+    --navy:#0f2a4a;
+    --navy-deep:#081b30;
+    --gold:#c79a2f;
+    --gold-soft:#f4e9d0;
+    --ink:#1f2430;
+    --line:#e6e2d8;
+    --card:#ffffff;
+  }
+  *{box-sizing:border-box;}
+
+  /* ===== TOP INFO BAR ===== */
+  .topbar{
+    background:var(--navy-deep);
+    color:#cfd8e3;
+    font-size:13px;
+    text-align:center;
+    padding:6px 16px;
+  }
+
+  /* ===== NAVBAR ===== */
+  .navbar{
+    background:var(--navy);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
+  }
+  .nav-inner{
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:6px;
+    padding:0 20px;
+    flex-wrap:wrap;
+  }
+  .nav-list{
+    display:flex;
+    align-items:center;
+    list-style:none;
+    gap:2px;
+    flex-wrap:wrap;
+    margin:0;
+    padding:0;
+  }
+  .nav-list>li{position:relative;}
+  .nav-list>li>a{
+    display:block;
+    padding:16px 14px;
+    color:#eef2f7;
+    text-decoration:none;
+    font-size:14.5px;
+    font-weight:500;
+    white-space:nowrap;
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  .nav-list>li>a:hover{color:var(--gold);}
+  .nav-list>li>a.active{color:var(--gold);}
+
+  .dropdown-toggle{
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+    cursor:pointer;
+  }
+  .dropdown-arrow{font-size:10px;transition:transform .2s ease;}
+
+  .dropdown-menu{
+    position:absolute;
+    top:100%;
+    left:0;
+    min-width:250px;
+    margin:0;
+    padding:6px 0;
+    list-style:none;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    box-shadow:0 16px 34px rgba(0,0,0,.22);
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(8px);
+    transition:opacity .18s ease, transform .18s ease, visibility .18s;
+    z-index:1200;
+  }
+  .dropdown-menu li{list-style:none;}
+  .dropdown-menu li a{
+    display:block;
+    padding:11px 22px;
+    color:var(--ink);
+    text-decoration:none;
+    font-size:14.5px;
+    white-space:nowrap;
+    border-left:3px solid transparent;
+    transition:background .15s ease,color .15s ease,border-color .15s ease;
+  }
+  .dropdown-menu li a:hover,
+  .dropdown-menu li a.active-link{
+    background:var(--gold-soft);
+    color:#8a6a15;
+    border-left-color:var(--gold);
+  }
+  .dropdown:hover .dropdown-menu,
+  .dropdown.open .dropdown-menu{
+    opacity:1;visibility:visible;transform:translateY(0);
+  }
+  .dropdown:hover .dropdown-arrow,
+  .dropdown.open .dropdown-arrow{transform:rotate(180deg);}
+
+  .btn-login{
+    background:var(--gold);
+    color:var(--navy-deep) !important;
+    font-weight:700;
+    padding:10px 20px !important;
+    border-radius:6px;
+    margin-left:6px;
+  }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- ================= TOP BAR + NAVBAR ================= -->
+
+<div class="topbar">Ramgarh College Ramgarh, Hazaribagh &nbsp;|&nbsp; Constituent University vinoba bhave</div>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+  <span></span><span></span><span></span>
+</button>
+    <ul class="nav-list" id="navList">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="academic.html">Academics</a></li>
+      <li><a href="admissions.html">Admissions</a></li>
+      <li><a href="notice.html">Notice</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="rti.html">RTI</a></li>
+      <li><a href="contact.html">Contact</a></li>
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" id="moreToggle" aria-haspopup="true" aria-expanded="false">
+          More <span class="dropdown-arrow">&#9662;</span>
+        </a>
+        <ul class="dropdown-menu" id="moreMenu">
+          <li><a href="more.html#ignou">IGNOU</a></li>
+          <li><a href="more.html#canteen">Canteen</a></li>
+          <li><a href="more.html#library">Library</a></li>
+          <li><a href="more.html#reading-room">Reading Room</a></li>
+          <li><a href="more.html#iqac">IQAC</a></li>
+          <li><a href="more.html#ncc">NCC</a></li>
+          <li><a href="more.html#nss">NSS</a></li>
+          <li><a href="more.html#multidisciplinary">Multidisciplinary Activities</a></li>
+          <li><a href="more.html#cs">CS</a></li>
+          <li><a href="more.html#sports">Sports</a></li>
+          <li><a href="more.html#hostel">Hostel</a></li>
+          <li><a href="more.html#iic">IIC</a></li>
+          
+        </ul>
+      </li>
+
+      <li><a href="../backend//scr/student-portal/login.php" class="btn-login">Student Login</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ================= ABOUT HERO ================= -->
+
+<section class="about-hero">
+
+    <div class="container">
+
+        <span class="section-tag">
+            About Ramgarh College
+        </span>
+
+        <h1>
+            About Ramgarh College, Ramgarh
+        </h1>
+
+        <p>
+            Established in 1963, Ramgarh College is a Constituent Unit of
+            Vinoba Bhave University, Hazaribag, committed to academic
+            excellence, innovation, and holistic development.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= COLLEGE HISTORY ================= -->
+
+<section class="history">
+
+    <div class="container history-container">
+
+        <!-- Left Side -->
+
+        <div class="history-image">
+
+            <img src="assets/images/college-history.jpg" alt="Ramgarh College">
+
+            <div class="history-year">
+                <span>1963</span>
+                <p>Established</p>
+            </div>
+
+        </div>
+
+        <!-- Right Side -->
+
+        <div class="history-content">
+
+            <span class="section-tag">
+                Our Journey
+            </span>
+
+            <h2>College History</h2>
+
+            <p>
+                Ramgarh College, Ramgarh was established in the year
+                <strong>1963</strong> with the vision of providing quality
+                higher education to the students of Ramgarh and nearby
+                regions.
+            </p>
+
+            <p>
+                Over the decades, the college has developed into one of
+                the leading constituent colleges under
+                <strong>Vinoba Bhave University, Hazaribag</strong>,
+                offering undergraduate and postgraduate education in
+                Arts, Science, Commerce and Vocational programmes.
+            </p>
+
+            <p>
+                The institution continues to promote academic excellence,
+                discipline, innovation, research and holistic development
+                while preparing responsible citizens for society.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= VISION MISSION MOTTO ================= -->
+
+<section class="vision-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span class="section-tag">Our Foundation</span>
+
+            <h2>Vision • Mission • Motto</h2>
+
+            <p>
+                Our guiding principles inspire excellence in education,
+                character building, and lifelong learning.
+            </p>
+
+        </div>
+
+        <div class="vision-grid">
+
+            <!-- Vision -->
+
+            <div class="vision-card">
+
+                <div class="vision-icon">
+                    <i class="fa-solid fa-eye"></i>
+                </div>
+
+                <h3>Vision</h3>
+
+                <p>
+                    <strong> To shape a learning community where curiosity becomes <br>
+                     knowledge, knowledge becomes purpose, and every student <br> finds the courage to create a meaningful future.”<br><hr>
+                        हिंदी अर्थ:
+                       “ऐसे शिक्षण समुदाय का निर्माण करना जहाँ जिज्ञासा ज्ञान में, ज्ञान उद्देश्य में और <br> प्रत्येक विद्यार्थी अपने सार्थक भविष्य को बनाने का साहस विकसित करे।.</strong>
+                </p>
+
+            </div>
+
+            <!-- Mission -->
+
+            <div class="vision-card">
+
+                <div class="vision-icon">
+                    <i class="fa-solid fa-bullseye"></i>
+                </div>
+
+                <h3>Mission</h3>
+
+                <p>
+                   <strong> Awakening Minds • Building Character • Creating the Future.<br><hr>
+                  हिंदी अर्थ : ज्ञान का जागरण • चरित्र का निर्माण • भविष्य का सृजन।</strong>
+                </p>
+
+            </div>
+
+            <!-- Motto -->
+
+            <div class="vision-card">
+
+                <div class="vision-icon">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <h3>Motto</h3>
+
+                <p>
+
+                    <strong>ज्ञानेन भविष्यं निर्मीमहे <br>
+                    Jñānena Bhaviṣyaṃ Nirmīmahe <br> <hr>
+                 “Empowering minds, inspiring innovation,<br>
+                  and building a brighter future through the power of knowledge.”<br>
+                  हिंदी अर्थ: “ज्ञान ही वह शक्ति है जो विचारों को नवाचार में और सपनों को उज्ज्वल भविष्य में बदलती है।”</strong>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= COLLEGE AT A GLANCE ================= -->
+
+<section class="glance">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span class="section-tag">
+                Quick Facts
+            </span>
+
+            <h2>College at a Glance</h2>
+
+        </div>
+
+        <div class="glance-grid">
+
+            <div class="glance-card">
+                <i class="fa-solid fa-calendar"></i>
+                <h3>Established</h3>
+                <p>1963</p>
+            </div>
+
+            <div class="glance-card">
+                <i class="fa-solid fa-building-columns"></i>
+                <h3>College Type</h3>
+                <p>Constituent Unit</p>
+            </div>
+
+            <div class="glance-card">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h3>University</h3>
+                <p>Vinoba Bhave University</p>
+            </div>
+
+            <div class="glance-card">
+                <i class="fa-solid fa-location-dot"></i>
+                <h3>Location</h3>
+                <p>Ramgarh, Jharkhand</p>
+            </div>
+
+            <div class="glance-card">
+                <i class="fa-solid fa-book-open"></i>
+                <h3>Programmes</h3>
+                <p>UG • PG • Vocational</p>
+            </div>
+
+            <div class="glance-card">
+                <i class="fa-solid fa-language"></i>
+                <h3>Medium</h3>
+                <p>Hindi &amp; English</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= ADMINISTRATION ================= -->
+
+<section class="administration section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span class="section-tag">Administration</span>
+
+            <h2>College Administration</h2>
+
+            <p>
+                Meet the administrative team responsible for the smooth functioning of the college.
+            </p>
+
+        </div>
+
+        <div class="admin-grid">
+
+            <div class="admin-card">
+                <i class="fa-solid fa-user-tie"></i>
+                <h3>Principal</h3>
+                <p>Dr. Bimal Mishra</p>
+            </div>
+
+            <div class="admin-card">
+                <i class="fa-solid fa-user-graduate"></i>
+                <h3>Vice Principal</h3>
+                <p>To Be Updated</p>
+            </div>
+
+            <div class="admin-card">
+                <i class="fa-solid fa-building"></i>
+                <h3>Office Superintendent</h3>
+                <p>To Be Updated</p>
+            </div>
+
+            <div class="admin-card">
+                <i class="fa-solid fa-id-card"></i>
+                <h3>Admission Cell</h3>
+                <p>Admission In-charge</p>
+            </div>
+
+            <div class="admin-card">
+                <i class="fa-solid fa-file-lines"></i>
+                <h3>Examination Cell</h3>
+                <p>Exam In-charge</p>
+            </div>
+
+            <div class="admin-card">
+                <i class="fa-solid fa-money-check-dollar"></i>
+                <h3>Accounts Section</h3>
+                <p>Accounts Officer</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FORMER PRINCIPALS ================= -->
+
+<section class="former-principal section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span class="section-tag">Leadership</span>
+
+            <h2>Former Principals</h2>
+
+            <p>
+                A list of principals who have served Ramgarh College over the years.
+            </p>
+
+        </div>
+
+        <div class="table-responsive">
+
+            <table class="principal-table">
+
+                <thead>
+
+                    <tr>
+                        <th>Sl. No.</th>
+                        <th>Name</th>
+                        <th>Tenure</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td>To Be Updated</td>
+                        <td>1963–19XX</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>To Be Updated</td>
+                        <td>19XX–19XX</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>To Be Updated</td>
+                        <td>19XX–19XX</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= CAMPUS LOCATION ================= -->
+
+<section class="campus-location section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span class="section-tag">
+                Visit Us
+            </span>
+
+            <h2>Campus Location</h2>
+
+            <p>
+                We welcome students, parents, alumni and visitors to
+                explore our beautiful campus.
+            </p>
+
+        </div>
+
+        <div class="location-container">
+
+            <!-- Left -->
+
+            <div class="location-info">
+
+                <div class="info-box">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <div>
+
+                        <h4>Address</h4>
+
+                        <p>
+                            Ramgarh College<br>
+                            Ramgarh, Jharkhand - 829122
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="info-box">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <div>
+
+                        <h4>Phone</h4>
+
+                        <p>+91 XXXXX XXXXX</p>
+
+                    </div>
+
+                </div>
+
+                <div class="info-box">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <div>
+
+                        <h4>Email</h4>
+
+                        <p>principal@ramgarhcollege.ac.in</p>
+
+                    </div>
+
+                </div>
+
+                <div class="info-box">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    <div>
+
+                        <h4>Office Hours</h4>
+
+                        <p>Monday – Saturday<br>10:00 AM – 5:00 PM</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Right -->
+
+            <div class="map-box">
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb="
+                    width="100%"
+                    height="400"
+                    style="border:0;"
+                    loading="lazy">
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= JAVASCRIPT ================= -->
+<script src="assets/js/about.js"></script>
+<script src="/aux-chatbot/aux-chatbot.js"></script>
+
+</body>
+</html>

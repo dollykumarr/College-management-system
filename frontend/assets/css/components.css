@@ -1,0 +1,96 @@
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+}
+
+.section-title h2{
+
+    font-size:42px;
+
+    color:var(--primary);
+
+    margin:15px 0;
+}
+
+.section-title p{
+
+    color:var(--gray);
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.8;
+}
+/* ===========================
+   SECTION TAG
+=========================== */
+
+.section-tag{
+    display:inline-block;
+    background:#E6F0FA;
+    color:#003366;
+    padding:10px 24px;
+    border-radius:50px;
+    font-weight:600;
+}
+
+/* ===========================
+   SECTION TITLE
+=========================== */
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:42px;
+    color:#003366;
+    margin:15px 0;
+}
+
+.section-title p{
+    color:#666;
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.btn{
+    display:inline-block;
+    padding:14px 32px;
+    background:#003366;
+    color:#fff;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#FFC107;
+    color:#000;
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.card{
+    background:#fff;
+    padding:35px;
+    border-radius:16px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}

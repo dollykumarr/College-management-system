@@ -1,0 +1,50 @@
+/* ==========================
+   GOOGLE FONT
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ==========================
+   ROOT VARIABLES
+========================== */
+
+:root{
+
+    /* Colors */
+
+    --primary:#003366;
+    --secondary:#FFC107;
+
+    --accent:#0EA5E9;
+
+    --success:#16A34A;
+
+    --danger:#DC2626;
+
+    --white:#ffffff;
+
+    --light:#F8FAFC;
+
+    --gray:#6B7280;
+
+    --dark:#1F2937;
+
+    --border:#E5E7EB;
+
+    /* Font */
+
+    --font:'Poppins',sans-serif;
+
+    /* Radius */
+
+    --radius:12px;
+
+    /* Shadow */
+
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+
+    /* Transition */
+
+    --transition:.35s ease;
+
+}

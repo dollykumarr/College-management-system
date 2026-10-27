@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admissions | Ramgarh College</title>
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="./assets/css/admission.css">
+
+    <!-- Topbar + Navbar CSS (inline, taaki hamesha dikhe) -->
+    <style id="navbar-inline">
+  :root{
+    --navy:#0f2a4a;
+    --navy-deep:#081b30;
+    --gold:#c79a2f;
+    --gold-soft:#f4e9d0;
+    --ink:#1f2430;
+    --line:#e6e2d8;
+    --card:#ffffff;
+  }
+
+  /* ===== TOP INFO BAR ===== */
+  .topbar{
+    background:var(--navy-deep);
+    color:#cfd8e3;
+    font-size:13px;
+    text-align:center;
+    padding:6px 16px;
+  }
+
+  /* ===== NAVBAR ===== */
+  .navbar{
+    background:var(--navy);
+    position:relative;
+    z-index:1000;
+    overflow:visible;
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
+  }
+  .nav-inner{
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:6px;
+    padding:0 20px;
+    flex-wrap:wrap;
+  }
+  .nav-list{
+    display:flex;
+    align-items:center;
+    list-style:none;
+    gap:2px;
+    flex-wrap:wrap;
+    margin:0;
+    padding:0;
+  }
+  .nav-list>li{position:relative;list-style:none;}
+  .nav-list>li>a{
+    display:block;
+    padding:16px 14px;
+    color:#eef2f7;
+    text-decoration:none;
+    font-size:14.5px;
+    font-weight:500;
+    white-space:nowrap;
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  .nav-list>li>a:hover{color:var(--gold);}
+  .nav-list>li>a.active{color:var(--gold);}
+
+  .dropdown-toggle{
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+    cursor:pointer;
+  }
+  .dropdown-arrow{font-size:10px;transition:transform .2s ease;}
+
+  .dropdown-menu{
+    position:absolute;
+    top:100%;
+    left:0;
+    min-width:250px;
+    margin:0;
+    padding:6px 0;
+    list-style:none;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    box-shadow:0 16px 34px rgba(0,0,0,.22);
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(8px);
+    transition:opacity .18s ease, transform .18s ease, visibility .18s;
+    z-index:9999;
+  }
+  .dropdown-menu li{list-style:none;}
+  .dropdown-menu li a{
+    display:block;
+    padding:11px 22px;
+    color:var(--ink);
+    text-decoration:none;
+    font-size:14.5px;
+    white-space:nowrap;
+    border-left:3px solid transparent;
+    transition:background .15s ease,color .15s ease,border-color .15s ease;
+  }
+  .dropdown-menu li a:hover,
+  .dropdown-menu li a.active-link{
+    background:var(--gold-soft);
+    color:#8a6a15;
+    border-left-color:var(--gold);
+  }
+  .dropdown:hover .dropdown-menu,
+  .dropdown.open .dropdown-menu{
+    opacity:1;visibility:visible;transform:translateY(0);
+  }
+  .dropdown:hover .dropdown-arrow,
+  .dropdown.open .dropdown-arrow{transform:rotate(180deg);}
+
+  .btn-login{
+    background:var(--gold);
+    color:var(--navy-deep) !important;
+    font-weight:700;
+    padding:10px 20px !important;
+    border-radius:6px;
+    margin-left:6px;
+  }
+    </style>
+
+</head>
+
+<body>
+
+<!-- ================= TOP BAR + NAVBAR ================= -->
+
+<div class="topbar">Ramgarh College Ramgarh, Hazaribagh &nbsp;|&nbsp; Constituted University Vinoba Bhave</div>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+  <span></span><span></span><span></span>
+</button>
+    <ul class="nav-list" id="navList">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="academic.html">Academics</a></li>
+      <li><a href="admissions.html" class="active">Admissions</a></li>
+      <li><a href="notice.html">Notice</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="rti.html">RTI</a></li>
+      <li><a href="contact.html">Contact</a></li>
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" id="moreToggle" aria-haspopup="true" aria-expanded="false">
+          More <span class="dropdown-arrow">&#9662;</span>
+        </a>
+        <ul class="dropdown-menu" id="moreMenu">
+          <li><a href="more.html#ignou">IGNOU</a></li>
+          <li><a href="more.html#canteen">Canteen</a></li>
+          <li><a href="more.html#library">Library</a></li>
+          <li><a href="more.html#reading-room">Reading Room</a></li>
+          <li><a href="more.html#iqac">IQAC</a></li>
+          <li><a href="more.html#ncc">NCC</a></li>
+          <li><a href="more.html#nss">NSS</a></li>
+          <li><a href="more.html#multidisciplinary">Multidisciplinary Activities</a></li>
+          <li><a href="more.html#cs">CS</a></li>
+          <li><a href="more.html#sports">Sports</a></li>
+          <li><a href="more.html#hostel">Hostel</a></li>
+          <li><a href="more.html#iic">IIC</a></li>
+          
+        </ul>
+      </li>
+
+      <li><a href="../backend/scr/student-portal/login.php" class="btn-login">Student Login</a></li>
+    </ul>
+  </div>
+</header>
+
+<hr>
+
+<!-- ================= SUB NAVBAR ================= -->
+
+<header class="sub-navbar">
+    <div class="logo">Ramgarh College</div>
+
+    <nav>
+        <a href="#programs">Programs</a>
+        <a href="#process">Admission</a>
+        <a href="#fees">Fees</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="#apply" class="nav-btn">Apply Now</a>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+        <span class="badge">Admissions Open 2026–27</span>
+
+        <h1>
+            Start Your Journey
+            <span>With Us</span>
+        </h1>
+
+        <p>
+            Build your future with quality education, experienced
+            faculty and a vibrant learning environment.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#apply" class="btn primary">Apply Now</a>
+            <a href="#process" class="btn secondary">View Admission Process</a>
+        </div>
+    </div>
+
+    <div class="hero-card">
+        <h3>Important Date</h3>
+        <p>Application Deadline</p>
+        <strong>30 June 2026</strong>
+
+        <hr>
+
+        <p>Classes Begin</p>
+        <strong>1 August 2026</strong>
+    </div>
+
+</section>
+
+
+<!-- ================= PROGRAMS ================= -->
+
+<section class="section" id="programs">
+
+    <div class="section-title">
+        <span>Programs</span>
+        <h2>Choose Your Program</h2>
+        <p>Explore our popular undergraduate and postgraduate programs.</p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">🎓</div>
+            <h3>Bachelor of Computer Applications</h3>
+            <p>Learn programming, software development and modern technologies.</p>
+
+            <div class="details">
+                <p><strong>Duration:</strong> 3 Years</p>
+                <p><strong>Eligibility:</strong> 12th Pass</p>
+            </div>
+
+            <a href="#apply">Apply for this course →</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">💼</div>
+            <h3>Bachelor of Business Administration</h3>
+            <p>Develop management, leadership and business skills.</p>
+
+            <div class="details">
+                <p><strong>Duration:</strong> 3 Years</p>
+                <p><strong>Eligibility:</strong> 12th Pass</p>
+            </div>
+
+            <a href="#apply">Apply for this course →</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">🔬</div>
+            <h3>Bachelor of Science</h3>
+            <p>Build strong foundations in science and analytical thinking.</p>
+
+            <div class="details">
+                <p><strong>Duration:</strong> 4 Years</p>
+                <p><strong>Eligibility:</strong> 12th Pass</p>
+            </div>
+
+            <a href="#apply">Apply for this course →</a>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= ELIGIBILITY ================= -->
+
+<section class="section light">
+
+    <div class="section-title">
+        <span>Requirements</span>
+        <h2>Eligibility Criteria</h2>
+    </div>
+
+    <div class="requirements">
+
+        <div class="requirement">
+            <div class="number">01</div>
+            <div>
+                <h3>Educational Qualification</h3>
+                <p>
+                    Candidates must have successfully completed
+                    their 12th grade or equivalent examination.
+                </p>
+            </div>
+        </div>
+
+        <div class="requirement">
+            <div class="number">02</div>
+            <div>
+                <h3>Minimum Marks</h3>
+                <p>
+                    Candidates should meet the minimum percentage
+                    required for their selected program.
+                </p>
+            </div>
+        </div>
+
+        <div class="requirement">
+            <div class="number">03</div>
+            <div>
+                <h3>Entrance Examination</h3>
+                <p>
+                    Some programs may require an entrance examination
+                    or personal interview.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= ADMISSION PROCESS ================= -->
+
+<section class="section" id="process">
+
+    <div class="section-title">
+        <span>How It Works</span>
+        <h2>Admission Process</h2>
+        <p>Follow these simple steps to complete your admission.</p>
+    </div>
+
+    <div class="process">
+
+        <div class="process-step">
+            <div class="step-number">01</div>
+            <h3>Register</h3>
+            <p>Create your account using your email and phone number.</p>
+        </div>
+
+        <div class="process-step">
+            <div class="step-number">02</div>
+            <h3>Fill Application</h3>
+            <p>Complete the online admission application form.</p>
+        </div>
+
+        <div class="process-step">
+            <div class="step-number">03</div>
+            <h3>Upload Documents</h3>
+            <p>Upload all required documents and certificates.</p>
+        </div>
+
+        <div class="process-step">
+            <div class="step-number">04</div>
+            <h3>Pay Fee</h3>
+            <p>Pay the application fee using the available payment methods.</p>
+        </div>
+
+        <div class="process-step">
+            <div class="step-number">05</div>
+            <h3>Selection</h3>
+            <p>Attend the entrance examination or interview if required.</p>
+        </div>
+
+        <div class="process-step">
+            <div class="step-number">06</div>
+            <h3>Confirm Admission</h3>
+            <p>Complete the final admission process and secure your seat.</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= IMPORTANT DATES ================= -->
+
+<section class="section light">
+
+    <div class="section-title">
+        <span>Schedule</span>
+        <h2>Important Dates</h2>
+    </div>
+
+    <div class="date-table">
+
+        <div class="date-row">
+            <strong>Application Starts</strong>
+            <span>1 June 2026</span>
+        </div>
+
+        <div class="date-row">
+            <strong>Application Deadline</strong>
+            <span>30 June 2026</span>
+        </div>
+
+        <div class="date-row">
+            <strong>Entrance Examination</strong>
+            <span>10 July 2026</span>
+        </div>
+
+        <div class="date-row">
+            <strong>Result Announcement</strong>
+            <span>20 July 2026</span>
+        </div>
+
+        <div class="date-row">
+            <strong>Classes Begin</strong>
+            <span>1 August 2026</span>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= DOCUMENTS ================= -->
+
+<section class="section">
+
+    <div class="section-title">
+        <span>Checklist</span>
+        <h2>Documents Required</h2>
+    </div>
+
+    <div class="document-grid">
+
+        <div>✓ Passport-size Photograph</div>
+        <div>✓ Identity Proof</div>
+        <div>✓ 10th Mark Sheet</div>
+        <div>✓ 12th Mark Sheet</div>
+        <div>✓ Transfer Certificate</div>
+        <div>✓ Migration Certificate</div>
+        <div>✓ Category Certificate</div>
+        <div>✓ Address Proof</div>
+
+    </div>
+</section>
+
+
+<!-- ================= FEES ================= -->
+
+<section class="section light" id="fees">
+
+    <div class="section-title">
+        <span>Financial Information</span>
+        <h2>Fee Structure</h2>
+    </div>
+
+    <div class="fee-table">
+
+        <div class="fee-row heading">
+            <strong>Program</strong>
+            <strong>Tuition Fee / Year</strong>
+            <strong>Application Fee</strong>
+        </div>
+
+        <div class="fee-row">
+            <span>BCA</span>
+            <span>₹60,000</span>
+            <span>₹500</span>
+        </div>
+
+        <div class="fee-row">
+            <span>BBA</span>
+            <span>₹55,000</span>
+            <span>₹500</span>
+        </div>
+
+        <div class="fee-row">
+            <span>B.Sc</span>
+            <span>₹50,000</span>
+            <span>₹500</span>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ================= APPLICATION FORM ================= -->
+
+<section class="section apply-section" id="apply">
+
+    <div class="section-title">
+        <span>Apply Today</span>
+        <h2>Start Your Application</h2>
+        <p>Fill out the form and our admission team will contact you.</p>
+    </div>
+
+    <form id="admissionForm" class="application-form">
+
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" id="name" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+        </div>
+
+        <div class="form-group">
+            <label>Select Program</label>
+
+            <select id="program" required>
+                <option value="">Select a program</option>
+                <option>BCA</option>
+                <option>BA</option>
+                <option>B.Sc</option>
+                <option>B.com</option>
+                <option>B.lis</option>
+            </select>
+        </div>
+
+        <div class="form-group full">
+            <label>Message</label>
+            <textarea id="message" rows="5" placeholder="Write your message"></textarea>
+        </div>
+
+        <button type="submit" class="btn primary full-btn">
+            Submit Application
+        </button>
+
+    </form>
+
+    <p id="fromMessage"></p>
+
+</section>
+
+
+<!-- ================= FAQ ================= -->
+
+<section class="section" id="faq">
+
+    <div class="section-title">
+        <span>Questions</span>
+        <h2>Frequently Asked Questions</h2>
+    </div>
+
+    <div class="faq">
+
+        <details>
+            <summary>Who can apply?</summary>
+            <p>
+                Students who meet the eligibility requirements
+                for their selected program can apply.
+            </p>
+        </details>
+
+        <details>
+            <summary>Can I apply online?</summary>
+            <p>
+                Yes. You can complete the application form online
+                through this page.
+            </p>
+        </details>
+
+        <details>
+            <summary>What documents are required?</summary>
+            <p>
+                You will need educational certificates, identity proof,
+                photographs and other documents specified by the college.
+            </p>
+        </details>
+
+        <details>
+            <summary>Is an entrance examination required?</summary>
+            <p>
+                Entrance requirements depend on the selected program.
+            </p>
+        </details>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+    <div>
+        <span>Need Help?</span>
+        <h2>Contact the Admission Office</h2>
+        <p>
+            Our admission team is available to help you with
+            your application.
+        </p>
+    </div>
+
+    <div class="contact-info">
+        <p>📞 +91 98765 43210</p>
+        <p>✉ admissions@ramgarhcollegeramgarh.ac.in</p>
+        <p>📍 ramgarh, jarkhand, India</p>
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+    <p>© 2026 Ramgarh College. All Rights Reserved.</p>
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="./assets/js/admission.js"></script>
+
+
+
+
+
+
+
+
+<script>
+document.getElementById('admissionForm').addEventListener('submit', async function (e) {
+  e.preventDefault();
+  const msgBox = document.getElementById('fromMessage');
+  const btn = this.querySelector('button[type="submit"]');
+  btn.disabled = true;
+  msgBox.style.color = 'inherit';
+  msgBox.textContent = 'Submitting...';
+
+  const data = new FormData();
+  data.append('admission_form', '1');
+  data.append('name', document.getElementById('name').value);
+  data.append('email', document.getElementById('email').value);
+  data.append('phone', document.getElementById('phone').value);
+  data.append('subject', 'Admission Application - ' + document.getElementById('program').value);
+  data.append('message', document.getElementById('message').value);
+
+  try {
+    const res = await fetch('../backend/scr/admin-panel/messages.php', { method: 'POST', body: data });
+    const result = await res.json();
+    if (result.success) {
+      msgBox.style.color = 'green';
+      msgBox.textContent = 'Application submitted successfully! Our team will contact you soon.';
+      this.reset();
+    } else {
+      msgBox.style.color = 'red';
+      msgBox.textContent = 'Submission failed. Please try again.';
+    }
+  } catch (err) {
+    msgBox.style.color = 'red';
+    msgBox.textContent = 'Something went wrong. Please try again.';
+  }
+  btn.disabled = false;
+});
+</script>
+<script src="/aux-chatbot/aux-chatbot.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var btn = document.getElementById('navToggle');
+  var list = document.getElementById('navList');
+  if (btn && list) {
+    btn.addEventListener('click', function () {
+      var open = list.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+  }
+});
+</script>
+
+</body>
+</html>

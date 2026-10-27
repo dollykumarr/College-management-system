@@ -1,0 +1,57 @@
+/* ===========================
+   COURSES SECTION
+=========================== */
+
+.courses{
+    padding:100px 0;
+    background:#ffffff;
+}
+
+.courses-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.course-card{
+    background:#fff;
+    border-radius:18px;
+    padding:35px 25px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:0.3s ease;
+}
+
+.course-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.course-card i{
+    font-size:45px;
+    color:var(--primary-color);
+    margin-bottom:20px;
+}
+
+.course-card h3{
+    margin-bottom:10px;
+    color:var(--primary-color);
+}
+
+.course-card p{
+    color:#666;
+    margin-bottom:20px;
+}
+
+.course-card a{
+    display:inline-block;
+    color:#fff;
+    background:var(--primary-color);
+    padding:10px 20px;
+    border-radius:6px;
+    transition:0.3s ease;
+}
+
+.course-card a:hover{
+    background:var(--secondary-color);
+}

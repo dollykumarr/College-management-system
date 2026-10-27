@@ -1,0 +1,60 @@
+.hero{
+    overflow:hidden;
+    height:90vh;
+    position:relative;
+    margin-top: 80px;
+     margin:0;
+    padding:0;
+}
+
+.slider{
+    width:100%;
+    height:100%;
+    position:relative;
+}
+
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    opacity:0;
+    transition:opacity 1s ease;
+}
+
+.slide.active{
+    opacity:1;
+}
+
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hero-overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    display:flex;
+    align-items:center;
+}
+
+.hero-text{
+    color:white;
+    max-width:650px;
+}
+
+.hero-text h1{
+
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+
+    font-size:1.2rem;
+    margin-bottom:35px;
+}

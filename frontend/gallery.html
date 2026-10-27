@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Gallery of Ramgarh College - Campus, Events, Cultural Activities, Sports and Academic Moments">
+    <title>Gallery | Ramgarh College</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Navbar CSS -->
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <!-- Gallery CSS -->
+    <link rel="stylesheet" href="assets/css/gallery.css">
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+</head>
+<body>
+
+<!-- =========================================================
+     NAVBAR (aapka existing navbar — kuch nahi badla)
+========================================================= -->
+
+<div class="topbar">Ramgarh College Ramgarh, Hazaribagh &nbsp;|&nbsp; Constituent University vinoba bhave</div>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+    <ul class="nav-list" id="navList">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="academic.html">Academics</a></li>
+      <li><a href="admissions.html">Admissions</a></li>
+      <li><a href="notice.html">Notice</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="rti.html">RTI</a></li>
+      <li><a href="contact.html">Contact</a></li>
+
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" id="moreToggle" aria-haspopup="true" aria-expanded="false">
+          More <span class="dropdown-arrow">&#9662;</span>
+        </a>
+        <ul class="dropdown-menu" id="moreMenu">
+          <li><a href="more.html#ignou">IGNOU</a></li>
+          <li><a href="more.html#canteen">Canteen</a></li>
+          <li><a href="more.html#library">Library</a></li>
+          <li><a href="more.html#reading-room">Reading Room</a></li>
+          <li><a href="more.html#iqac">IQAC</a></li>
+          <li><a href="more.html#ncc">NCC</a></li>
+          <li><a href="more.html#nss">NSS</a></li>
+          <li><a href="more.html#multidisciplinary">Multidisciplinary Activities</a></li>
+          <li><a href="more.html#cs">CS</a></li>
+          <li><a href="more.html#sports">Sports</a></li>
+          <li><a href="more.html#hostel">Hostel</a></li>
+          <li><a href="more.html#iic">IIC</a></li>
+          
+        </ul>
+      </li>
+
+      <li><a href="../backend//scr/student-portal/login.php" class="btn-login">Student Login</a></li>
+    </ul>
+  </div>
+</header>
+
+
+<!-- =========================================================
+     GALLERY HERO
+========================================================= -->
+
+<section class="gallery-hero">
+    <div class="container">
+        <span class="gallery-tag">COLLEGE GALLERY</span>
+        <h1>Moments & Memories</h1>
+        <p>Explore campus life, academic activities, events and memorable moments of Ramgarh College.</p>
+    </div>
+</section>
+
+
+<!-- =========================================================
+     GALLERY FILTER + GRID
+========================================================= -->
+
+<section class="gallery-section">
+    <div class="container">
+
+        <div class="gallery-heading">
+            <span>OUR MOMENTS</span>
+            <h2>College Gallery</h2>
+        </div>
+
+        <div class="gallery-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="campus">Campus</button>
+            <button class="filter-btn" data-filter="events">Events</button>
+            <button class="filter-btn" data-filter="cultural">Cultural</button>
+            <button class="filter-btn" data-filter="sports">Sports</button>
+            <button class="filter-btn" data-filter="academic">Academic</button>
+        </div>
+
+        <!-- Har card ab data-driven hai: har item ek unique key deta hai
+             (data-key), View click karne par usi key ka popup khulta hai. -->
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item" data-category="campus">
+                <img src="assets/gallery/campus/cover.jpg" alt="Ramgarh College Campus" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3>Ramgarh College Campus</h3>
+                    <button type="button" class="view-btn" onclick="openGallery('campus')">View</button>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="campus">
+                <img src="assets/gallery/college-building/cover.jpg" alt="College Building" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3>College Building</h3>
+                    <button type="button" class="view-btn" onclick="openGallery('college-building')">View</button>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="cultural">
+                <img src="assets/gallery/cultural-event/cover.jpg" alt="Cultural Event" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3>Cultural Event</h3>
+                    <button type="button" class="view-btn" onclick="openGallery('cultural-event')">View</button>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="academic">
+                <img src="assets/gallery/academic/cover.jpg" alt="Academic Activity" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3>Academic Activity</h3>
+                    <button type="button" class="view-btn" onclick="openGallery('academic')">View</button>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="events">
+                <img src="assets/gallery/college-function/cover.jpg" alt="College Function" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3>College Function</h3>
+                    <button type="button" class="view-btn" onclick="openGallery('college-function')">View</button>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="events">
+                <img src="assets/gallery/teachers-day/cover.jpg" alt="Teachers Day" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3>Teachers Day</h3>
+                    <button type="button" class="view-btn" onclick="openGallery('teachers-day')">View</button>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="cultural">
+                <img src="assets/gallery/freshers/cover.jpg" alt="Freshers Party" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3>Freshers Party</h3>
+                    <button type="button" class="view-btn" onclick="openGallery('freshers')">View</button>
+                </div>
+            </div>
+
+            <div class="gallery-item" data-category="cultural">
+                <img src="assets/gallery/farewell/cover.jpg" alt="Farewell" loading="lazy">
+                <div class="gallery-overlay">
+                    <h3>Farewell</h3>
+                    <button type="button" class="view-btn" onclick="openGallery('farewell')">View</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- =========================================================
+     QUOTE / CTA SECTION (naya section jo aapne maanga tha —
+     hero jaise hi style mein, students-faculty memories +
+     "best college" wala message)
+========================================================= -->
+
+<section class="gallery-quote">
+    <div class="container">
+        <span class="gallery-tag">WHY RAMGARH COLLEGE</span>
+        <p class="quote-text">
+            "Every corridor holds a memory, every classroom a friendship — here,
+            students and faculty don't just share a campus, they build a family
+            that lasts long after graduation."
+        </p>
+        <h2>Choose the college that becomes a part of your story.</h2>
+        <a href="admissions.html" class="quote-btn">Explore Admissions</a>
+    </div>
+</section>
+
+
+<!-- =========================================================
+     LIGHTBOX (main grid ke images ke liye)
+========================================================= -->
+
+<div class="gallery-lightbox" id="galleryLightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous">&#10094;</button>
+    <img id="lightboxImage" src="" alt="Gallery Preview">
+    <button class="lightbox-next" id="lightboxNext" aria-label="Next">&#10095;</button>
+</div>
+
+
+
+
+
+
+<!-- =========================================================
+     GALLERY POPUPS — har category ka apna popup
+     (naya photo/video daalna ho to bas neeche <img>/<video>
+     line copy-paste karke file name badal do)
+========================================================= -->
+
+<!-- Har popup ab KHALI hai — gallery.js apne aap "galleryData" object
+     se saari photos/videos bhar dega. Naya photo/video add karna ho
+     to sirf gallery.js ki file open karo, wahan list badha do. -->
+
+<!-- Independence Day -->
+<div id="popup-independence-day" class="gallery-popup">
+  <div class="gallery-popup-content">
+    <button type="button" class="gallery-close" onclick="closeGallery('independence-day')">&times;</button>
+    <h2>Independence Day</h2>
+    <h3>Photos</h3>
+    <div class="popup-gallery" id="photos-independence-day"></div>
+    <h3>Videos</h3>
+    <div class="popup-videos" id="videos-independence-day"></div>
+  </div>
+</div>
+
+<!-- College Building -->
+<div id="popup-college-building" class="gallery-popup">
+  <div class="gallery-popup-content">
+    <button type="button" class="gallery-close" onclick="closeGallery('college-building')">&times;</button>
+    <h2>College Building</h2>
+    <h3>Photos</h3>
+    <div class="popup-gallery" id="photos-college-building"></div>
+    <h3>Videos</h3>
+    <div class="popup-videos" id="videos-college-building"></div>
+  </div>
+</div>
+
+<!-- Campus -->
+<div id="popup-campus" class="gallery-popup">
+  <div class="gallery-popup-content">
+    <button type="button" class="gallery-close" onclick="closeGallery('campus')">&times;</button>
+    <h2>Ramgarh College Campus</h2>
+    <h3>Photos</h3>
+    <div class="popup-gallery" id="photos-campus"></div>
+    <h3>Videos</h3>
+    <div class="popup-videos" id="videos-campus"></div>
+  </div>
+</div>
+
+<!-- Cultural Event -->
+<div id="popup-cultural-event" class="gallery-popup">
+  <div class="gallery-popup-content">
+    <button type="button" class="gallery-close" onclick="closeGallery('cultural-event')">&times;</button>
+    <h2>Cultural Event</h2>
+    <h3>Photos</h3>
+    <div class="popup-gallery" id="photos-cultural-event"></div>
+    <h3>Videos</h3>
+    <div class="popup-videos" id="videos-cultural-event"></div>
+  </div>
+</div>
+
+<!-- Sports -->
+<div id="popup-sports" class="gallery-popup">
+  <div class="gallery-popup-content">
+    <button type="button" class="gallery-close" onclick="closeGallery('sports')">&times;</button>
+    <h2>College Sports Activity</h2>
+    <h3>Photos</h3>
+    <div class="popup-gallery" id="photos-sports"></div>
+    <h3>Videos</h3>
+    <div class="popup-videos" id="videos-sports"></div>
+  </div>
+</div>
+
+<!-- Academic -->
+<div id="popup-academic" class="gallery-popup">
+  <div class="gallery-popup-content">
+    <button type="button" class="gallery-close" onclick="closeGallery('academic')">&times;</button>
+    <h2>Academic Activity</h2>
+    <h3>Photos</h3>
+    <div class="popup-gallery" id="photos-academic"></div>
+    <h3>Videos</h3>
+    <div class="popup-videos" id="videos-academic"></div>
+  </div>
+</div>
+
+<!-- College Function -->
+<div id="popup-college-function" class="gallery-popup">
+  <div class="gallery-popup-content">
+    <button type="button" class="gallery-close" onclick="closeGallery('college-function')">&times;</button>
+    <h2>College Function</h2>
+    <h3>Photos</h3>
+    <div class="popup-gallery" id="photos-college-function"></div>
+    <h3>Videos</h3>
+    <div class="popup-videos" id="videos-college-function"></div>
+  </div>
+</div>
+
+<!-- Teachers Day -->
+<div id="popup-teachers-day" class="gallery-popup">
+  <div class="gallery-popup-content">
+    <button type="button" class="gallery-close" onclick="closeGallery('teachers-day')">&times;</button>
+    <h2>Teachers Day</h2>
+    <h3>Photos</h3>
+    <div class="popup-gallery" id="photos-teachers-day"></div>
+    <h3>Videos</h3>
+    <div class="popup-videos" id="videos-teachers-day"></div>
+  </div>
+</div>
+
+<!-- Freshers -->
+<div id="popup-freshers" class="gallery-popup">
+  <div class="gallery-popup-content">
+    <button type="button" class="gallery-close" onclick="closeGallery('freshers')">&times;</button>
+    <h2>Freshers Party</h2>
+    <h3>Photos</h3>
+    <div class="popup-gallery" id="photos-freshers"></div>
+    <h3>Videos</h3>
+    <div class="popup-videos" id="videos-freshers"></div>
+  </div>
+</div>
+
+<!-- Farewell -->
+<div id="popup-farewell" class="gallery-popup">
+  <div class="gallery-popup-content">
+    <button type="button" class="gallery-close" onclick="closeGallery('farewell')">&times;</button>
+    <h2>Farewell</h2>
+    <h3>Photos</h3>
+    <div class="popup-gallery" id="photos-farewell"></div>
+    <h3>Videos</h3>
+    <div class="popup-videos" id="videos-farewell"></div>
+  </div>
+</div>
+
+
+<!-- =========================================================
+     POPUP LIGHTBOX (popup ke andar kisi photo YA video par click
+     karne par usse bada/fullscreen dikhane ke liye, prev/next ke saath)
+========================================================= -->
+
+
+<div class="popup-lightbox" id="popupLightbox">
+    <button class="lightbox-close" onclick="closePopupLightbox()">&times;</button>
+    <button class="lightbox-prev" onclick="navPopupLightbox(-1)">&#10094;</button>
+    <img id="popupLightboxImg" src="" alt="">
+    <video id="popupLightboxVideo" controls autoplay playsinline></video>
+    <button class="lightbox-next" onclick="navPopupLightbox(1)">&#10095;</button>
+</div>
+
+
+<!-- =========================================================
+     FOOTER (aapka existing footer — kuch nahi badla)
+========================================================= -->
+
+<footer>
+    <!-- aapka existing footer yahan rahega -->
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT — ek hi saaf script, koi duplicate/dead code nahi
+========================================================= -->
+
+<script src="assets/js/navbar.js"></script>
+<script src="assets/js/gallery.js"></script>
+
+
+<!-- ===== BACKGROUND MUSIC ===== -->
+<audio id="bgMusic" src="assets/music/bg-music.mp3" loop preload="auto"></audio>
+<button id="musicToggle" type="button" aria-label="Music on/off" title="Music on/off">🔊</button>
+
+<style>
+#musicToggle{position:fixed;left:20px;bottom:20px;z-index:9999;width:50px;height:50px;border:none;border-radius:50%;background:#0d47a1;color:#fff;font-size:22px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3);transition:transform .2s}
+#musicToggle:hover{transform:scale(1.1)}
+#musicToggle.off{background:#777}
+</style>
+
+<script>
+(function () {
+  var music = document.getElementById('bgMusic');
+  var btn = document.getElementById('musicToggle');
+  var wanted = true;            // false = student ne khud music band kiya
+  music.volume = 0.4;
+
+  function videoPlaying() {
+    var v = document.querySelectorAll('video');
+    for (var i = 0; i < v.length; i++) {
+      if (!v[i].paused && !v[i].ended) return true;
+    }
+    return false;
+  }
+
+  function sync() {
+    if (wanted && !videoPlaying()) { music.play().catch(function () {}); }
+    else { music.pause(); }
+  }
+
+  function updateIcon() {
+    btn.textContent = wanted ? '🔊' : '🔇';
+    btn.classList.toggle('off', !wanted);
+  }
+
+  // Floating button: student music on/off kar sakta hai
+  btn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    wanted = !wanted;
+    updateIcon();
+    sync();
+  });
+
+  // Koi bhi video play ho to music band, video band/khatam ho to music wapas
+  ['play', 'pause', 'ended', 'emptied'].forEach(function (ev) {
+    document.addEventListener(ev, function () { setTimeout(sync, 80); }, true);
+  });
+
+  // Browser autoplay block kare to pehle click/touch par start hoga
+  music.play().catch(function () {
+    function unlock() {
+      sync();
+      document.removeEventListener('click', unlock);
+      document.removeEventListener('touchstart', unlock);
+      document.removeEventListener('keydown', unlock);
+    }
+    document.addEventListener('click', unlock);
+    document.addEventListener('touchstart', unlock);
+    document.addEventListener('keydown', unlock);
+  });
+
+  updateIcon();
+})();
+</script>
+<script src="/aux-chatbot/aux-chatbot.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var btn = document.getElementById('navToggle');
+  var list = document.getElementById('navList');
+  if (btn && list) {
+    btn.addEventListener('click', function () {
+      list.classList.toggle('open');
+    });
+  }
+});
+</script>
+
+</body>
+</html>

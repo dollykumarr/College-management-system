@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RTI | Ramgarh College, Ramgarh</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+
+    <!-- RTI CSS -->
+    <link rel="stylesheet" href="assets/css/rti.css">
+
+</head>
+
+<body id="top">
+
+    <!-- ================= HEADER ================= -->
+
+    <style>
+  :root{
+    --navy:#0f2a4a;
+    --navy-deep:#081b30;
+    --gold:#c79a2f;
+    --gold-soft:#f4e9d0;
+    --ink:#1f2430;
+    --line:#e6e2d8;
+    --card:#ffffff;
+  }
+  *{box-sizing:border-box;}
+
+  /* ===== TOP INFO BAR ===== */
+  .topbar{
+    background:var(--navy-deep);
+    color:#cfd8e3;
+    font-size:13px;
+    text-align:center;
+    padding:6px 16px;
+  }
+
+  /* ===== NAVBAR ===== */
+  .navbar{
+    background:var(--navy);
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
+  }
+  .nav-inner{
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:6px;
+    padding:0 20px;
+    flex-wrap:wrap;
+  }
+  .nav-list{
+    display:flex;
+    align-items:center;
+    list-style:none;
+    gap:2px;
+    flex-wrap:wrap;
+    margin:0;
+    padding:0;
+  }
+  .nav-list>li{position:relative;}
+  .nav-list>li>a{
+    display:block;
+    padding:16px 14px;
+    color:#eef2f7;
+    text-decoration:none;
+    font-size:14.5px;
+    font-weight:500;
+    white-space:nowrap;
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  .nav-list>li>a:hover{color:var(--gold);}
+  .nav-list>li>a.active{color:var(--gold);}
+
+  .dropdown-toggle{
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+    cursor:pointer;
+  }
+  .dropdown-arrow{font-size:10px;transition:transform .2s ease;}
+
+  .dropdown-menu{
+    position:absolute;
+    top:100%;
+    left:0;
+    min-width:250px;
+    margin:0;
+    padding:6px 0;
+    list-style:none;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    box-shadow:0 16px 34px rgba(0,0,0,.22);
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(8px);
+    transition:opacity .18s ease, transform .18s ease, visibility .18s;
+    z-index:1200;
+  }
+  .dropdown-menu li{list-style:none;}
+  .dropdown-menu li a{
+    display:block;
+    padding:11px 22px;
+    color:var(--ink);
+    text-decoration:none;
+    font-size:14.5px;
+    white-space:nowrap;
+    border-left:3px solid transparent;
+    transition:background .15s ease,color .15s ease,border-color .15s ease;
+  }
+  .dropdown-menu li a:hover,
+  .dropdown-menu li a.active-link{
+    background:var(--gold-soft);
+    color:#8a6a15;
+    border-left-color:var(--gold);
+  }
+  .dropdown:hover .dropdown-menu,
+  .dropdown.open .dropdown-menu{
+    opacity:1;visibility:visible;transform:translateY(0);
+  }
+  .dropdown:hover .dropdown-arrow,
+  .dropdown.open .dropdown-arrow{transform:rotate(180deg);}
+
+  .btn-login{
+    background:var(--gold);
+    color:var(--navy-deep) !important;
+    font-weight:700;
+    padding:10px 20px !important;
+    border-radius:6px;
+    margin-left:6px;
+  }
+
+  .nav-toggle{
+    display:none;
+    background:none;
+    border:none;
+    color:#fff;
+    font-size:24px;
+    padding:12px 16px;
+    cursor:pointer;
+  }
+
+  @media (max-width:900px){
+    .nav-toggle{display:block;margin-left:auto;}
+    .nav-inner{justify-content:space-between;}
+    .nav-list{
+      display:none;
+      width:100%;
+      flex-direction:column;
+      align-items:stretch;
+      background:var(--navy);
+      padding-bottom:10px;
+    }
+    .nav-list.open{display:flex;}
+    .nav-list>li>a{padding:14px 20px;}
+    .dropdown-menu{
+      position:static;
+      box-shadow:none;border:none;
+      border-left:2px solid rgba(255,255,255,.15);
+      border-radius:0;
+      margin-left:16px;
+      background:var(--navy-deep);
+      display:none;
+      opacity:1;visibility:visible;transform:none;
+    }
+    .dropdown-menu li a{color:#dbe3ee;}
+    .dropdown-menu li a:hover,
+    .dropdown-menu li a.active-link{background:rgba(199,154,47,.15);color:var(--gold);}
+    .dropdown.open .dropdown-menu{display:block;}
+    .btn-login{margin:10px 20px;text-align:center;}
+  }
+</style>
+
+<div class="topbar">Ramgarh College Ramgarh, Hazaribagh &nbsp;|&nbsp; Constituent University vinoba bhave</div>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+    <ul class="nav-list" id="navList">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="academic.html">Academics</a></li>
+      <li><a href="admissions.html">Admissions</a></li>
+      <li><a href="notice.html">Notice</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="rti.html">RTI</a></li>
+      <li><a href="contact.html">Contact</a></li>
+
+      <li class="dropdown">
+                <a href="#" class="dropdown-toggle" id="moreToggle" aria-haspopup="true" aria-expanded="false">
+                    More <span class="dropdown-arrow">&#9662;</span>
+                </a>
+
+                <ul class="dropdown-menu" id="moreMenu">
+                    <li><a href="more.html#ignou">IGNOU</a></li>
+                    <li><a href="more.html#canteen">Canteen</a></li>
+                    <li><a href="more.html#library">Library</a></li>
+                    <li><a href="more.html#reading-room">Reading Room</a></li>
+                    <li><a href="more.html#iqac">IQAC</a></li>
+                    <li><a href="more.html#ncc">NCC</a></li>
+                    <li><a href="more.html#nss">NSS</a></li>
+                    <li><a href="more.html#multidisciplinary">Multidisciplinary Activities</a></li>
+                    <li><a href="more.html#cs">CS</a></li>
+                    <li><a href="more.html#sports">Sports</a></li>
+                    <li><a href="more.html#hostel">Hostel</a></li>
+                    <li><a href="more.html#iic">IIC</a></li>
+                    
+                </ul>
+            </li>
+
+      <li><a href="../backend//scr/student-portal/login.php" class="btn-login">Student Login</a></li>
+    </ul>
+  </div>
+</header>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  const dropdown = document.querySelector('.dropdown');
+  const toggle = document.getElementById('moreToggle');
+  const navToggle = document.getElementById('navToggle');
+  const navList = document.getElementById('navList');
+
+  function isMobileView() {
+    return window.innerWidth <= 900;
+  }
+
+  if (navToggle && navList) {
+    navToggle.addEventListener('click', function () {
+      navList.classList.toggle('open');
+    });
+  }
+
+  if (dropdown && toggle) {
+    toggle.addEventListener('click', function (e) {
+      if (isMobileView()) {
+        e.preventDefault();
+        dropdown.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', dropdown.classList.contains('open'));
+      }
+    });
+
+    toggle.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        dropdown.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', dropdown.classList.contains('open'));
+      }
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        dropdown.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    window.addEventListener('resize', function () {
+      if (!isMobileView()) {
+        dropdown.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-list > li > a').forEach(function (link) {
+    const linkFile = link.getAttribute('href').split('#')[0];
+    if (linkFile === currentFile) {
+      link.classList.add('active');
+    }
+  });
+
+});
+</script>
+
+
+    <!-- ================= RTI HERO ================= -->
+
+    <section class="rti-hero">
+
+        <div class="container">
+
+            <span class="rti-tag">
+                Right to Information
+            </span>
+
+            <h1>
+                Right to Information
+            </h1>
+
+            <p>
+                Information and transparency at Ramgarh College.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= WHAT IS RTI ================= -->
+
+    <section class="rti-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>RTI</span>
+
+                <h2>
+                    What is RTI?
+                </h2>
+
+            </div>
+
+            <div class="rti-intro">
+
+                <div class="rti-icon">
+                    <i class="fa-solid fa-circle-info"></i>
+                </div>
+
+                <div>
+
+                    <p>
+                        The Right to Information (RTI) enables eligible
+                        citizens to seek information held by public
+                        authorities, subject to the applicable law and rules.
+                    </p>
+
+                    <p>
+                        Applicants may seek information relating to the
+                        college through the prescribed RTI procedure.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= INFORMATION ================= -->
+
+    <section class="rti-section rti-light">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>Information</span>
+
+                <h2>
+                    Information Available under RTI
+                </h2>
+
+            </div>
+
+
+            <div class="rti-grid">
+
+                <!-- Administration -->
+
+                <div class="rti-card">
+
+                    <div class="card-icon">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+
+                    <h3>
+                        College Administration
+                    </h3>
+
+                    <p>
+                        Information relating to the administrative
+                        functioning and available records of the college.
+                    </p>
+
+                </div>
+
+
+                <!-- Academic -->
+
+                <div class="rti-card">
+
+                    <div class="card-icon">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+
+                    <h3>
+                        Academic Information
+                    </h3>
+
+                    <p>
+                        Information relating to academic programmes,
+                        activities and available academic records.
+                    </p>
+
+                </div>
+
+
+                <!-- Records -->
+
+                <div class="rti-card">
+
+                    <div class="card-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+
+                    <h3>
+                        College Records
+                    </h3>
+
+                    <p>
+                        Information and documents available with the
+                        college, subject to applicable rules.
+                    </p>
+
+                </div>
+
+
+                <!-- Rules -->
+
+                <div class="rti-card">
+
+                    <div class="card-icon">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+
+                    <h3>
+                        Rules & Regulations
+                    </h3>
+
+                    <p>
+                        Information regarding applicable rules,
+                        procedures and regulations.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= RTI APPLICATION ================= -->
+
+    <section class="rti-section">
+
+        <div class="container">
+
+            <div class="rti-application">
+
+                <div>
+
+                    <span class="rti-small-title">
+                        Application
+                    </span>
+
+                    <h2>
+                        RTI Application
+                    </h2>
+
+                    <p>
+                        To request information under RTI, applicants
+                        should use the prescribed application form and
+                        follow the applicable submission procedure.
+                    </p>
+
+                    <p>
+                        Please provide clear and specific details of the
+                        information being requested.
+                    </p>
+
+                </div>
+
+
+                <div class="rti-download">
+
+                    <i class="fa-solid fa-file-pdf"></i>
+
+                    <div>
+
+                        <h3>
+                            RTI Application Form
+                        </h3>
+
+                        <p>
+                            Prescribed form for requesting information.
+                        </p>
+
+                        <a
+                            href="assets/documents/rti-application-form.pdf"
+                            target="_blank"
+                            class="rti-btn">
+
+                            <i class="fa-solid fa-download"></i>
+                            Download Form
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PIO ================= -->
+
+    <section class="rti-section rti-light">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>Contact</span>
+
+                <h2>
+                    Public Information Officer
+                </h2>
+
+            </div>
+
+            <div class="pio-card">
+
+                <div class="pio-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div>
+
+                    <h3>
+                        Public Information Officer
+                    </h3>
+
+                    <p>
+                        The Public Information Officer is responsible
+                        for receiving and processing RTI applications
+                        according to the applicable provisions.
+                    </p>
+
+                    <div class="pio-details">
+
+                        <p>
+                            <strong>Designation:</strong>
+                            Public Information Officer
+                        </p>
+
+                        <p>
+                            <strong>Name:</strong>
+                            To be updated
+                        </p>
+
+                        <p>
+                            <strong>Email:</strong>
+                            To be updated
+                        </p>
+
+                        <p>
+                            <strong>Phone:</strong>
+                            To be updated
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= RTI DOCUMENTS ================= -->
+
+    <section class="rti-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>Documents</span>
+
+                <h2>
+                    RTI Documents
+                </h2>
+
+            </div>
+
+            <div class="documents-grid">
+
+
+                <div class="document-card">
+
+                    <i class="fa-solid fa-file-pdf"></i>
+
+                    <h3>
+                        RTI Application Form
+                    </h3>
+
+                    <p>
+                        Prescribed form for submitting an RTI request.
+                    </p>
+
+                    <a
+                        href="assets/documents/rti-application-form.pdf"
+                        target="_blank">
+
+                        Download
+
+                    </a>
+
+                </div>
+
+
+                <div class="document-card">
+
+                    <i class="fa-solid fa-file-pdf"></i>
+
+                    <h3>
+                        RTI Act, 2005
+                    </h3>
+
+                    <p>
+                        Reference document relating to the Right
+                        to Information Act.
+                    </p>
+
+                    <a
+                        href="assets\documents\rti-act-2005.pdf" 
+                        target="_blank">
+                        
+
+                        View Document
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= IMPORTANT NOTE ================= -->
+
+    <section class="rti-note">
+
+        <div class="container">
+
+            <i class="fa-solid fa-circle-exclamation"></i>
+
+            <div>
+
+                <h3>
+                    Important Note
+                </h3>
+
+                <p>
+                    RTI applications should contain clear and specific
+                    details of the information requested and should be
+                    submitted through the prescribed procedure.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div>
+                    <h3>Ramgarh College</h3>
+                    <p>
+                        Ramgarh, Jharkhand
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Quick Links</h3>
+
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="academic.html">Academic</a>
+                    <a href="admissions.html">Admissions</a>
+                    <a href="rti.html">RTI</a>
+                    <a href="contact.html">Contact</a>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                © 2026 Ramgarh College. All Rights Reserved.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= BACK TO TOP ================= -->
+
+    <a href="#top" class="back-to-top" id="backToTop">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/rti.js"></script>
+    <script src="/aux-chatbot/aux-chatbot.js"></script>
+
+</body>
+
+</html>

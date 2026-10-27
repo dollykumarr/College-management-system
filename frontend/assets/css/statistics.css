@@ -1,0 +1,56 @@
+/* ===========================
+   STATISTICS SECTION
+=========================== */
+
+.statistics{
+    padding:100px 0;
+    background:var(--primary-color);
+    color:#fff;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.stat-card{
+
+    text-align:center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+
+
+
+
+
+    
+}
+
+.stat-card h3{
+    font-size:3rem;
+    margin-bottom:10px;
+    color:var(--accent-color);
+    margin: 0 0 8px;
+}
+
+.stat-card p{
+    font-size:1.1rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Statistics Section Title */
+
+.statistics .section-title h2{
+    color: #ffffff;
+}
+
+.statistics .section-title p{
+    color: rgba(255,255,255,0.85);
+}

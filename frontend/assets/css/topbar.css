@@ -1,0 +1,134 @@
+/* =========================================================
+   topbar-ticker.css  -  Animated top bar (right -> left)
+   Isse index.html me responsive.css ke BAAD link karo.
+   Speed badalni ho to sirf --ticker-time badlo.
+   ========================================================= */
+
+.top-bar.ticker-bar{
+    --ticker-time: 40s;          /* ek poora cycle: bada = dheere, chhota = tez */
+    --ticker-bg-1: #071a33;      /* deep navy */
+    --ticker-bg-2: #0d2f5c;      /* royal navy */
+    --ticker-text: #e8eef7;
+    --ticker-accent: #f5b301;    /* gold (icons + separator) */
+
+    background: linear-gradient(90deg, var(--ticker-bg-1), var(--ticker-bg-2) 50%, var(--ticker-bg-1));
+    border-bottom: 2px solid var(--ticker-accent);
+    padding: 0;
+    overflow: hidden;
+}
+
+.top-bar.ticker-bar .ticker{
+    overflow: hidden;
+    /* dono kinaron par halka fade, professional look ke liye */
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+            mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+}
+
+.top-bar.ticker-bar .ticker-track{
+    display: flex;
+    width: max-content;
+    animation: tickerMove var(--ticker-time) linear infinite;
+    will-change: transform;
+}
+
+/* mouse upar le jao to ruk jayega, taaki aaram se padh sako */
+.top-bar.ticker-bar .ticker:hover .ticker-track{
+    animation-play-state: paused;
+}
+
+.top-bar.ticker-bar .ticker-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-shrink: 0;
+    min-width: 100vw;
+}
+
+.top-bar.ticker-bar .ticker-item{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .3px;
+    color: var(--ticker-text);
+    white-space: nowrap;
+}
+
+.top-bar.ticker-bar .ticker-item i{
+    color: var(--ticker-accent);
+    font-size: 14px;
+}
+
+/* teeno ke beech me gold separator dot */
+.top-bar.ticker-bar .ticker-item::after{
+    content: "\2022";
+    color: var(--ticker-accent);
+    margin-left: 48px;
+    font-size: 18px;
+    line-height: 1;
+}
+
+@keyframes tickerMove{
+    from{ transform: translateX(0); }
+    to  { transform: translateX(-50%); }
+}
+
+@media (max-width: 600px){
+    .top-bar.ticker-bar{ --ticker-time: 32s; }
+    .top-bar.ticker-bar .ticker-item{ font-size: 13px; padding: 8px 0; }
+}
+
+/* jinki device settings me animation band hai unke liye static dikhega */
+@media (prefers-reduced-motion: reduce){
+    .top-bar.ticker-bar .ticker{ -webkit-mask-image: none; mask-image: none; }
+    .top-bar.ticker-bar .ticker-track{ animation: none; width: 100%; justify-content: center; }
+    .top-bar.ticker-bar .ticker-group{ flex-wrap: wrap; min-width: 0; gap: 4px 28px; justify-content: center; }
+    .top-bar.ticker-bar .ticker-group[aria-hidden="true"]{ display: none; }
+    .top-bar.ticker-bar .ticker-item::after{ display: none; }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ===========================
+   TOP BAR
+=========================== */
+
+.top-bar{
+    background:#0B2447;
+    color:#fff;
+    font-size:14px;
+    padding:8px 0;
+}
+
+.top-bar-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.top-left,
+.top-right{
+    display:flex;
+    gap:25px;
+}
+
+.top-left span,
+.top-right span{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.top-bar i{
+    color:#FFC107;
+}

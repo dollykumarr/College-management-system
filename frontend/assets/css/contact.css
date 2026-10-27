@@ -1,0 +1,496 @@
+/* =========================================================
+   CONTACT PAGE
+========================================================= */
+
+:root {
+    --contact-blue: #084d8c;
+    --contact-dark-blue: #063b6d;
+    --contact-light-blue: #eef6fc;
+    --contact-gold: #f5b400;
+    --contact-text: #1f2937;
+    --contact-muted: #6b7280;
+    --contact-border: #e2e8f0;
+    --contact-white: #ffffff;
+}
+
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+.contact-hero .container,
+.contact-section .container,
+.contact-map .container,
+.quick-contact .container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   CONTACT HERO
+========================================================= */
+
+.contact-hero {
+    padding: 85px 0;
+
+    background:
+        linear-gradient(
+            rgba(6, 59, 109, 0.90),
+            rgba(8, 77, 140, 0.90)
+        );
+
+    color: var(--contact-white);
+    text-align: center;
+}
+
+.contact-tag {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: var(--contact-gold);
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.contact-hero h1 {
+    margin: 0 0 15px;
+
+    font-size: clamp(34px, 5vw, 52px);
+    line-height: 1.15;
+}
+
+.contact-hero p {
+    max-width: 600px;
+    margin: 0 auto;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CONTACT SECTION
+========================================================= */
+
+.contact-section {
+    padding: 80px 0;
+
+    background: var(--contact-white);
+}
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   SECTION LABEL
+========================================================= */
+
+.section-label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: var(--contact-gold);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+}
+
+
+/* =========================================================
+   CONTACT INFORMATION
+========================================================= */
+
+.contact-info h2,
+.contact-form-wrapper h2,
+.map-heading h2 {
+    margin: 0 0 15px;
+
+    color: var(--contact-dark-blue);
+
+    font-size: 32px;
+}
+
+.contact-info > p {
+    max-width: 520px;
+
+    margin: 0 0 35px;
+
+    color: var(--contact-muted);
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CONTACT ITEMS
+========================================================= */
+
+.contact-item {
+    display: flex;
+
+    gap: 16px;
+
+    margin-bottom: 24px;
+}
+
+.contact-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+
+    background: var(--contact-light-blue);
+
+    color: var(--contact-blue);
+
+    font-size: 19px;
+}
+
+.contact-item h3 {
+    margin: 0 0 5px;
+
+    color: var(--contact-text);
+
+    font-size: 16px;
+}
+
+.contact-item p {
+    margin: 0;
+
+    color: var(--contact-muted);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+.contact-item a {
+    color: var(--contact-blue);
+
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+.contact-form-wrapper {
+    padding: 35px;
+
+    border: 1px solid var(--contact-border);
+    border-radius: 12px;
+
+    background: var(--contact-white);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: var(--contact-text);
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    border: 1px solid var(--contact-border);
+    border-radius: 7px;
+
+    background: var(--contact-white);
+
+    color: var(--contact-text);
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.form-group input {
+    height: 46px;
+
+    padding: 0 14px;
+}
+
+.form-group textarea {
+    min-height: 120px;
+
+    padding: 12px 14px;
+
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--contact-blue);
+
+    box-shadow: 0 0 0 3px rgba(8, 77, 140, 0.08);
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.contact-submit {
+    width: 100%;
+
+    padding: 13px 20px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: var(--contact-blue);
+    color: var(--contact-white);
+
+    font-family: inherit;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.contact-submit:hover {
+    background: var(--contact-dark-blue);
+}
+
+.form-message {
+    margin: 12px 0 0;
+
+    font-size: 13px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   MAP
+========================================================= */
+
+.contact-map {
+    padding: 70px 0;
+
+    background: var(--contact-light-blue);
+}
+
+.map-heading {
+    margin-bottom: 25px;
+}
+
+.map-container {
+    width: 100%;
+
+    height: 400px;
+
+    overflow: hidden;
+
+    border-radius: 12px;
+
+    background: #dbeafe;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+}
+
+
+/* =========================================================
+   QUICK CONTACT
+========================================================= */
+
+.quick-contact {
+    padding: 65px 0;
+
+    background: var(--contact-dark-blue);
+
+    color: var(--contact-white);
+
+    text-align: center;
+}
+
+.quick-contact h2 {
+    margin: 0 0 10px;
+
+    font-size: 30px;
+}
+
+.quick-contact p {
+    margin: 0 0 25px;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 15px;
+}
+
+.quick-contact-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.quick-contact-buttons a {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 22px;
+
+    border-radius: 6px;
+
+    background: var(--contact-white);
+    color: var(--contact-blue);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: transform 0.2s ease;
+}
+
+.quick-contact-buttons a:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .contact-form-wrapper {
+        padding: 28px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .contact-hero {
+        padding: 65px 0;
+    }
+
+    .contact-hero h1 {
+        font-size: 36px;
+    }
+
+    .contact-section {
+        padding: 60px 0;
+    }
+
+    .contact-info h2,
+    .contact-form-wrapper h2,
+    .map-heading h2 {
+        font-size: 27px;
+    }
+
+    .map-container {
+        height: 300px;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .contact-form-wrapper {
+        padding: 22px;
+    }
+
+    .quick-contact-buttons {
+        flex-direction: column;
+    }
+
+    .quick-contact-buttons a {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+}
+@media (max-width: 900px) {
+  .navbar {
+    display: block !important;
+    height: auto !important;
+    min-height: 70px !important;
+    overflow: visible !important;
+  }
+  .nav-inner {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: flex-start !important;
+    height: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+  }
+  .nav-list {
+    flex-basis: 100% !important;
+    width: 100% !important;
+  }
+}

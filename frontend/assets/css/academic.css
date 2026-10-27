@@ -1,0 +1,731 @@
+/* =========================================================
+   academic.css  -  Academics page styles
+   Save at: frontend/assets/css/academic.css
+========================================================= */
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ece8e8;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: min(1200px, 92%);
+    margin: auto;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+#academic-hero {
+    position: relative;
+    min-height: 650px;
+
+    background-image: url("../images/college-building.jpg");
+
+    /* पूरी building दिखाने के लिए */
+    background-size: 100% 100%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+/* Transparent Blue Overlay */
+
+.academic-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(8, 45, 82, 0.72);
+    z-index: 1;
+}
+
+/* Hero Content */
+
+.academic-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-tag {
+    display: inline-block;
+    color: #f4b400;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.academic-hero-content h1 {
+    white-space: normal;
+    max-width: 85px;
+    font-size: clamp(45px, 6vw, 75px);
+    
+}
+
+#academic-hero h1 span {
+    color: #f4b400;
+}
+
+#academic-hero p {
+    max-width: 750px;
+    font-size: 19px;
+    color: #e8eef4;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background: #f4b400;
+    color: #003b6f;
+}
+
+.btn-primary:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.btn-outline:hover {
+    background: #ffffff;
+    color: #003b6f;
+}
+
+
+/* =========================================================
+   GENERAL SECTION
+========================================================= */
+
+.academic-section {
+    padding: 90px 0;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 55px;
+}
+
+.section-tag {
+    display: inline-block;
+    color: #003b6f;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.section-heading h2,
+.academic-section h2 {
+    color: #003b6f;
+    font-size: clamp(32px, 4vw, 44px);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.section-heading p {
+    color: #666;
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   COURSES
+========================================================= */
+
+#courses {
+    background: #ffffff;
+}
+
+.course-category {
+    margin-bottom: 55px;
+}
+
+.course-category:last-child {
+    margin-bottom: 0;
+}
+
+.course-category h3 {
+    color: #003b6f;
+    font-size: 27px;
+    margin-bottom: 25px;
+    padding-left: 15px;
+    border-left: 5px solid #f4b400;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.course-card {
+    padding: 30px;
+    border: 1px solid #e5e9ee;
+    border-radius: 12px;
+    background: #ffffff;
+    transition: 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0, 59, 111, 0.1);
+    border-color: #f4b400;
+}
+
+.course-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4b400;
+    color: #003b6f;
+    border-radius: 10px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.course-card h4 {
+    color: #003b6f;
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.course-card p {
+    color: #666;
+}
+
+
+/* =========================================================
+   SYLLABUS
+========================================================= */
+
+.syllabus-section {
+    background: #f4f8fc;
+}
+
+.syllabus-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.syllabus-content h2 {
+    margin-bottom: 12px;
+}
+
+.syllabus-content p {
+    color: #666;
+    max-width: 700px;
+}
+
+
+/* =========================================================
+   FACULTY
+========================================================= */
+
+#faculty {
+    background: #ffffff;
+}
+
+.faculty-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.faculty-card {
+    border: 1px solid #e5e9ee;
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+    transition: 0.3s ease;
+}
+
+.faculty-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 59, 111, 0.1);
+}
+
+.faculty-photo {
+    height: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f5fa;
+    font-size: 70px;
+}
+
+.faculty-info {
+    padding: 25px;
+}
+
+.faculty-info h3 {
+    color: #003b6f;
+    margin-bottom: 10px;
+}
+
+.faculty-info p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.faculty-info a,
+.department-card a {
+    color: #003b6f;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   DEPARTMENTS
+========================================================= */
+
+.departments-section {
+    background: #f7f9fc;
+}
+
+.department-filter {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.department-filter-btn {
+    border: 1px solid #d5dce4;
+    background: white;
+    color: #003b6f;
+    padding: 11px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.department-filter-btn:hover,
+.department-filter-btn.active {
+    background: #003b6f;
+    color: white;
+    border-color: #003b6f;
+}
+
+#department-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.department-card {
+    background: white;
+    border: 1px solid #e2e7ec;
+    border-radius: 12px;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.department-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 59, 111, 0.08);
+}
+
+.department-card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.department-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4b400;
+    border-radius: 10px;
+    font-size: 26px;
+}
+
+.department-card h3 {
+    color: #003b6f;
+    font-size: 26px;
+}
+
+.department-card ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9px;
+    margin-bottom: 25px;
+}
+
+.department-card li {
+    color: #555;
+    padding-left: 17px;
+    position: relative;
+}
+
+.department-card li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #f4b400;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   FACILITIES
+========================================================= */
+
+#facilities {
+    background: #ffffff;
+}
+
+#facility-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.facility-card {
+    padding: 28px 22px;
+    border: 1px solid #e4e8ec;
+    border-radius: 12px;
+    background: white;
+    transition: 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 59, 111, 0.09);
+}
+
+.facility-icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.facility-card h3 {
+    color: #003b6f;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.facility-card p {
+    color: #666;
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   CAMPUS LIFE
+========================================================= */
+
+.campus-section {
+    background: #f4f8fc;
+}
+
+#campus-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.campus-card {
+    background: white;
+    padding: 28px 22px;
+    border-radius: 12px;
+    border: 1px solid #e4e8ec;
+    transition: 0.3s;
+}
+
+.campus-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 59, 111, 0.08);
+}
+
+.campus-icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.campus-card h3 {
+    color: #003b6f;
+    margin-bottom: 10px;
+}
+
+.campus-card p {
+    color: #666;
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+#academic-contact {
+    padding: 90px 20px;
+    text-align: center;
+    background: #003b6f;
+    color: white;
+}
+
+#academic-contact .section-tag {
+    color: #f4b400;
+}
+
+#academic-contact h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+#academic-contact p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #dce8f1;
+}
+
+
+/* =========================================================
+   HIDDEN CLASS FOR JS
+========================================================= */
+
+.department-card.hidden {
+    display: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .faculty-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #facility-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #campus-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .academic-section {
+        padding: 65px 0;
+    }
+
+    #academic-hero {
+        min-height: 550px;
+    }
+
+    #academic-hero p {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .course-grid,
+    .faculty-grid,
+    #department-grid,
+    #facility-grid,
+    #campus-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .department-card ul {
+        grid-template-columns: 1fr;
+    }
+
+    .syllabus-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+}
+
+.nav-toggle {
+  display: none;
+  background: transparent !important;
+  border: none !important;
+  padding: 12px 14px;
+  margin-left: auto;
+  cursor: pointer;
+}
+.nav-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  margin: 6px 0;
+  border-radius: 2px;
+}
+@media (max-width: 900px) {
+  .nav-toggle { display: block !important; }
+  .nav-inner {
+    flex-wrap: wrap !important;
+    align-items: flex-start !important;
+  }
+  .nav-list {
+    display: none !important;
+    flex-direction: column !important;
+    flex-basis: 100% !important;
+    width: 100% !important;
+  }
+  .nav-list.open { display: flex !important; }
+}
+/* ===== MOBILE POLISH ===== */
+@media (max-width: 650px) {
+
+    /* Hero: पूरी फ़ोटो proportion में, खिंची हुई नहीं */
+    #academic-hero {
+        min-height: 520px;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+    }
+    #academic-hero .container { width: 90%; }
+    .academic-hero-content { padding: 50px 0; }
+    .academic-hero-content h1 {
+        font-size: clamp(30px, 9vw, 40px);
+        line-height: 1.15;
+    }
+    .hero-tag { font-size: 13px; letter-spacing: 2px; }
+    .hero-buttons { gap: 10px; }
+    .hero-buttons .btn { padding: 12px 22px; font-size: 14px; }
+
+    /* Section headings */
+    .section-heading h2,
+    .academic-section h2 { font-size: 26px; }
+    .section-heading p { font-size: 15px; }
+    .course-category h3 { font-size: 21px; }
+
+    /* Cards compact */
+    .course-card,
+    .faculty-info,
+    .department-card { padding: 20px; }
+
+    /* Facilities और Campus Life: 2 columns, छोटे cards */
+    #facility-grid,
+    #campus-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .facility-card,
+    .campus-card { padding: 18px 14px; }
+    .facility-icon,
+    .campus-icon { font-size: 30px; margin-bottom: 10px; }
+    .facility-card h3,
+    .campus-card h3 { font-size: 15px; }
+    .facility-card p,
+    .campus-card p { font-size: 13px; }
+}
+@media (max-width: 650px) {
+
+    /* ऊँचाई कम, ताकि ऊपर खाली आसमान न बचे */
+    #academic-hero {
+        min-height: 460px;
+        background-size: cover;
+        background-position: center bottom;
+        align-items: flex-end;
+    }
+    .academic-hero-content { padding: 40px 0 36px; }
+
+    /* Heading: डॉट्स शब्दों के साथ एक ही लाइन में */
+    .academic-hero-content h1 {
+        font-size: 26px;
+        line-height: 1.25;
+    }
+    #academic-hero h1 span {
+        display: inline;
+    }
+
+    /* टेक्स्ट पढ़ने लायक रहे */
+    .academic-hero-overlay {
+        background: linear-gradient(to top, rgba(8, 45, 82, 0.9), rgba(8, 45, 82, 0.45));
+    }
+    #academic-hero p { font-size: 14px; margin-bottom: 22px; }
+
+    /* Buttons साथ-साथ */
+    .hero-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .hero-buttons .btn {
+        padding: 11px 18px;
+        font-size: 14px;
+    }
+}

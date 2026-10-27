@@ -1,0 +1,449 @@
+/* ===========================
+   FOOTER
+=========================== */
+
+.footer{
+    background:#0b1f3a;
+    color:#ffffff;
+    padding:70px 0 0;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1.5fr;
+    gap:40px;
+}
+
+.footer-col h3{
+    margin-bottom:20px;
+    color:var(--accent-color);
+}
+
+.footer-col p,
+.footer-col li{
+    color:#dcdcdc;
+    margin-bottom:12px;
+    line-height:1.8;
+}
+
+.footer-col ul{
+    padding:0;
+}
+
+.footer-col a{
+    color:#dcdcdc;
+    transition:0.3s;
+}
+
+.footer-col a:hover{
+    color:#ffffff;
+}
+
+.social-icons{
+    margin-top:20px;
+}
+
+
+
+.social-icons a:nth-child(1) {
+    color: #1877F2; /* Facebook */
+    display:inline-flex;
+justify-content:center;
+align-items:center;
+width:40px;
+height:40px;
+margin-right:10px;
+border-radius:50%;
+background:white;
+transition:0.3s
+}
+
+.social-icons a:nth-child(2) {
+    color: #E4405F; /* Instagram */
+    display:inline-flex;
+justify-content:center;
+align-items:center;
+width:40px;
+height:40px;
+margin-right:10px;
+border-radius:50%;
+background:white;
+transition:0.3s
+}
+
+.social-icons a:nth-child(3) {
+    color: #0A66C2; /* LinkedIn */
+    display:inline-flex;
+justify-content:center;
+align-items:center;
+width:40px;
+height:40px;
+margin-right:10px;
+border-radius:50%;
+background:white;
+transition:0.3s
+}
+
+.social-icons a:nth-child(4) {
+    color: #FF0000; /* YouTube */
+    display:inline-flex;
+justify-content:center;
+align-items:center;
+width:40px;
+height:40px;
+margin-right:10px;
+border-radius:50%;
+background:white;
+transition:0.3s
+}
+
+.social-icons a:nth-child(5) {
+    color: #08a0e9; /* X / Twitter */
+    display:inline-flex;
+justify-content:center;
+align-items:center;
+width:40px;
+height:40px;
+margin-right:10px;
+border-radius:50%;
+background:white;
+transition:0.3s
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.social-icons a:hover{
+    background:var(--accent-color);
+    color:#000;
+}
+
+.footer-bottom{
+    text-align:center;
+    padding:25px 0;
+    margin-top:50px;
+    border-top:1px solid rgba(255,255,255,0.15);
+}
+
+.footer-bottom p{
+    color:#d0d0d0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   COLLEGE MANAGEMENT PORTAL
+   ===================================================== */
+
+.college-management-card {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    max-width: 370px;
+
+    margin-top: 24px;
+    padding: 15px 16px;
+
+    text-decoration: none;
+
+    background: #f8f7f2;
+
+    border: 1px solid rgba(212, 167, 67, 0.35);
+    border-radius: 12px;
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.14);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* Subtle gold line */
+
+.college-management-card::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 4px;
+
+    background: #d4a743;
+}
+
+
+/* Hover */
+
+.college-management-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #d4a743;
+
+    box-shadow:
+        0 10px 26px rgba(0, 0, 0, 0.20);
+}
+
+
+/* Lock */
+
+.management-lock {
+    width: 44px;
+    height: 44px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 13px;
+
+    border-radius: 10px;
+
+    background: rgba(212, 167, 67, 0.14);
+
+    color: #b8861b;
+
+    font-size: 18px;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.college-management-card:hover .management-lock {
+    background: #d4a743;
+
+    color: #ffffff;
+
+    transform: scale(1.05);
+}
+
+
+/* Content */
+
+.management-content {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.management-label {
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+
+    color: #b8861b;
+}
+
+
+.management-content h4 {
+    margin: 0;
+
+    font-size: 15px;
+    line-height: 1.3;
+
+    font-weight: 600;
+
+    color: #142d4c;
+}
+
+
+.management-content p {
+    margin: 4px 0 0;
+
+    font-size: 11px;
+    line-height: 1.4;
+
+    color: #667085;
+}
+
+
+/* Arrow */
+
+.management-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+
+    margin-left: 10px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #142d4c;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.college-management-card:hover .management-arrow {
+    background: #b8861b;
+
+    transform: translateX(4px);
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .college-management-card {
+        max-width: 340px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .college-management-card {
+        max-width: 100%;
+
+        margin-top: 20px;
+
+        padding: 14px;
+    }
+
+    .management-lock {
+        width: 40px;
+        height: 40px;
+
+        margin-right: 11px;
+
+        font-size: 16px;
+    }
+
+    .management-label {
+        font-size: 8px;
+
+        letter-spacing: 1.2px;
+    }
+
+    .management-content h4 {
+        font-size: 14px;
+    }
+
+    .management-content p {
+        font-size: 10px;
+    }
+
+    .management-arrow {
+        width: 30px;
+        height: 30px;
+
+        margin-left: 7px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   ===================================================== */
+
+@media (max-width: 380px) {
+
+    .college-management-card {
+        padding: 12px;
+    }
+
+    .management-lock {
+        width: 37px;
+        height: 37px;
+
+        margin-right: 9px;
+    }
+
+    .management-content h4 {
+        font-size: 13px;
+    }
+
+    .management-content p {
+        font-size: 9px;
+    }
+
+}
+/* Developer credit */
+.developer-credit {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #c9d6e6;
+}
+.developer-credit strong {
+    color: #f5b301;
+}
+.developer-credit a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.developer-credit a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .developer-credit {
+        font-size: 12.5px;
+        line-height: 1.7;
+    }
+}

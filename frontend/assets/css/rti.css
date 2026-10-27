@@ -1,0 +1,379 @@
+/* ================= RTI PAGE ================= */
+header, .navbar{
+    background: linear-gradient(135deg, #0b3d91, #1769aa);
+    color: #1F2937;
+}
+
+.rti-hero {
+    padding: 110px 20px 90px;
+    background: linear-gradient(135deg, #0b3d91, #1769aa);
+    color: #ffffff;
+}
+
+.rti-hero .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.rti-tag,
+.rti-small-title {
+    display: inline-block;
+    color: #dbeafe;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.rti-hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.rti-hero p {
+    max-width: 700px;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* ================= SECTIONS ================= */
+
+.rti-section {
+    padding: 75px 20px;
+    background: #ffffff;
+}
+
+.rti-light {
+    background: #f5f8fc;
+}
+
+.rti-section .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* ================= HEADING ================= */
+
+.section-heading {
+    margin-bottom: 40px;
+}
+
+.section-heading span {
+    color: #1769aa;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+    color: #102a43;
+    margin-top: 8px;
+}
+
+
+/* ================= INTRO ================= */
+
+.rti-intro {
+    display: flex;
+    gap: 25px;
+    padding: 30px;
+    background: #f5f8fc;
+    border-left: 5px solid #1769aa;
+    border-radius: 12px;
+}
+
+.rti-icon {
+    width: 55px;
+    height: 55px;
+    min-width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1769aa;
+    color: white;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.rti-intro p {
+    color: #4b5563;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+
+/* ================= RTI CARDS ================= */
+
+.rti-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.rti-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    transition: 0.3s ease;
+}
+
+.rti-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.10);
+}
+
+.card-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e8f1fb;
+    color: #1769aa;
+    border-radius: 12px;
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+.rti-card h3 {
+    color: #102a43;
+    margin-bottom: 12px;
+}
+
+.rti-card p {
+    color: #64748b;
+    line-height: 1.7;
+}
+
+
+/* ================= APPLICATION ================= */
+
+.rti-application {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.rti-application h2 {
+    font-size: 34px;
+    color: #102a43;
+    margin-bottom: 15px;
+}
+
+.rti-application p {
+    color: #64748b;
+    line-height: 1.8;
+}
+
+.rti-download {
+    padding: 30px;
+    background: #f5f8fc;
+    border-radius: 15px;
+    display: flex;
+    gap: 22px;
+    align-items: flex-start;
+}
+
+.rti-download > i {
+    font-size: 42px;
+    color: #dc2626;
+}
+
+.rti-download h3 {
+    color: #102a43;
+    margin-bottom: 8px;
+}
+
+.rti-download p {
+    margin-bottom: 18px;
+}
+
+.rti-btn {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    padding: 12px 20px;
+    background: #1769aa;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.rti-btn:hover {
+    background: #0b3d91;
+}
+
+
+/* ================= PIO ================= */
+
+.pio-card {
+    display: flex;
+    gap: 25px;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+}
+
+.pio-icon {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e8f1fb;
+    color: #1769aa;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.pio-card h3 {
+    color: #102a43;
+    margin-bottom: 10px;
+}
+
+.pio-card p {
+    color: #64748b;
+    line-height: 1.7;
+}
+
+.pio-details {
+    margin-top: 20px;
+}
+
+
+/* ================= DOCUMENTS ================= */
+
+.documents-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.document-card {
+    padding: 30px;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    background: white;
+}
+
+.document-card > i {
+    font-size: 35px;
+    color: #dc2626;
+    margin-bottom: 15px;
+}
+
+.document-card h3 {
+    color: #102a43;
+    margin-bottom: 10px;
+}
+
+.document-card p {
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.document-card a {
+    color: #1769aa;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.document-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* ================= NOTE ================= */
+
+.rti-note {
+    padding: 35px 20px;
+    background: #fff7ed;
+}
+
+.rti-note .container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.rti-note > .container > i {
+    color: #ea580c;
+    font-size: 25px;
+}
+
+.rti-note h3 {
+    color: #9a3412;
+    margin-bottom: 8px;
+}
+
+.rti-note p {
+    color: #7c2d12;
+    line-height: 1.7;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .rti-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .rti-application {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .rti-hero h1 {
+        font-size: 34px;
+    }
+
+    .rti-grid,
+    .documents-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rti-intro,
+    .pio-card {
+        flex-direction: column;
+    }
+
+}
+@media (max-width: 900px) {
+  .navbar {
+    display: block !important;
+    height: auto !important;
+    min-height: 70px !important;
+    overflow: visible !important;
+  }
+  .nav-inner {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: flex-start !important;
+    height: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+  }
+  .nav-list {
+    flex-basis: 100% !important;
+    width: 100% !important;
+  }
+}
